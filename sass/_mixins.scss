@@ -1,0 +1,32 @@
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: $max-width)  { @content; }
+  }
+
+  @else if $point == init {
+    @media (max-width: $max-width) { @content; }
+  }
+
+   @else if $point == tab_land  {
+    @media (max-width : 1024px) { @content; }
+  }
+
+  @else if $point == tab_port  {
+    @media (max-width : 1000px) { @content; }
+  }
+
+  @else if $point == mama-bear {
+    @media (max-width: 768px)  { @content; }
+  }
+
+  @else if $point == baby-bear {
+    @media (max-width: 560px)  { @content; }
+  }
+
+
+  @else if $point == slide_switch {
+    @media (max-width: 480px)  { @content; }
+  }
+
+}
+
