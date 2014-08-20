@@ -16,8 +16,46 @@ body {
 /* =Global
 ----------------------------------------------- */
 
+.brd-line {
+	width:100px;
+	display: inline-block;
+	border-bottom: 2px solid;
+}
 
-/* Text elements */
+.dark {
+	.brd-line {
+		border-color: $off_white;
+	}
+}
+
+.light {
+	.brd-line {
+		border-color: $body_color;
+	}
+}
+
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+
 p {
 	margin-bottom: 1.5em;
 }

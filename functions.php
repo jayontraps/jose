@@ -22,6 +22,51 @@ if ( ! function_exists( 'jose_setup' ) ) :
  */
 function jose_setup() {
 
+
+	// override default jQuery version (1.8.2) 
+	if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+	function my_jquery_enqueue() {
+	   wp_deregister_script('jquery');
+	   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js", false, null);
+	   wp_enqueue_script('jquery');
+	}
+
+
+
+	// register portfolio post-type
+	add_action('init', 'cptui_register_my_cpt_portfolio');
+	function cptui_register_my_cpt_portfolio() {
+	register_post_type('portfolio', array(
+	'label' => 'Portfolio',
+	'description' => '',
+	'public' => true,
+	'show_ui' => true,
+	'show_in_menu' => true,
+	'capability_type' => 'post',
+	'map_meta_cap' => true,
+	'hierarchical' => false,
+	'rewrite' => array('slug' => 'portfolio', 'with_front' => true),
+	'query_var' => true,
+	'supports' => array('title','editor','page-attributes','post-formats', 'custom-fields', 'thumbnail'),
+	'labels' => array (
+	  'name' => 'Portfolio',
+	  'singular_name' => 'Portfolio Item',
+	  'menu_name' => 'Portfolio',
+	  'add_new' => 'Add Portfolio Item',
+	  'add_new_item' => 'Add New Portfolio Item',
+	  'edit' => 'Edit',
+	  'edit_item' => 'Edit Portfolio Item',
+	  'new_item' => 'New Portfolio Item',
+	  'view' => 'View Portfolio Item',
+	  'view_item' => 'View Portfolio Item',
+	  'search_items' => 'Search Portfolio',
+	  'not_found' => 'No Portfolio Found',
+	  'not_found_in_trash' => 'No Portfolio Found in Trash',
+	  'parent' => 'Parent Portfolio Item',
+	)
+	) ); }	 
+	
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -43,6 +88,7 @@ function jose_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'jose' ),
+		'footer' => __( 'Footer Menu', 'jose' ),
 	) );
 	
 	/*
@@ -92,11 +138,22 @@ add_action( 'widgets_init', 'jose_widgets_init' );
  * Enqueue scripts and styles.
  */
 function jose_scripts() {
+
+	wp_enqueue_style('jose-fontsdotcom', 'http://fast.fonts.net/cssapi/6d7687f4-16fc-4c67-aea7-bab36c3d5397.css');
+
+	wp_enqueue_style( 'jose-google-fonts', 'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|News+Cycle');
+
 	wp_enqueue_style( 'jose-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'jose-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'jose-modenizr', get_template_directory_uri() . '/js/modernizr-2.8.0.min.js', array(), false);
 
-	wp_enqueue_script( 'jose-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+
+	// wp_enqueue_script( 'jose-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	// wp_enqueue_script( 'jose-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	// combined above:
+	wp_enqueue_script( 'jose-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'jose-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '20140808', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -1,46 +1,33 @@
 // layout
-$max-width: 1250px;
+$max-width: 100%;
+
 
 
 // spacing
 $pad: 20px;
-
 $margin-bottom: .5em;
 
+
+
 // colors
-$wide_bg : #999999;
-
 $bg : #fbfbfb;
-
 $body_color	:#333333;
-
 $off_white: #fbfbfb;
 $light_grey: #b4b4b4;
-
-$dark_grey: #8f8f8f;
-
-$darker_grey: #333;
-
-
-$green1: #999965;
-$red: #990100;
-$yellow: #f9b62a;
-$green2: #6d9733;
 
 
 
 
 // fonts
-$body_font : 'texgyreherosregular', sans-serif;
-$body_font_size : 16px;
+$body_font : TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+$body_font_size : 17px;
 $body_line_height : 1.5em;
-$heading_font : 'texgyreheroscnregular', sans-serif;
-$mid_font : 'texgyreheroscnregular', sans-serif;
+$heading_font : 'News Cycle', sans-serif; // 'texgyreherosregular', sans-serif;
 $letter-spacing: .2em;
 
 
 // headings
-$h1-size:           3em; // .alpha
+$h1-size:           2.5em; // .alpha
 $h2-size:           2.5em; // .beta
 $h3-size:           1.5em; // .gamma
 $h4-size:           1.2em; // .delta
@@ -50,8 +37,8 @@ $h6-size:           1em; // .zeta
 $h2-size-bookpage: 36px;
 
 // links
-$link_color: royalblue;
-$link_hover_color: red;
+$link_color: $body_color;
+$link_hover_color: $body_color;
 
 
 

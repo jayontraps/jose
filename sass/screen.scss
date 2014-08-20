@@ -3,18 +3,20 @@
 @import "fonts";
 @import "vars";
 @import "mixins";
-@import "_normalize";
-// @import "_style"; // underscore
+@import "normalize";
+// @import "_style"; // = complete underscore
 
 // @import "reset";
-// @import "underscore";
-
+@import "underscore";
 @import "grid";
 @import "global";
 @import "layout";
 @import "header";
+@import "footer";
 @import "typography";
 @import "nav";
+@import "item";
+@import "vid-overlay";
 @import "helpers";
 @import "style-guide";
 

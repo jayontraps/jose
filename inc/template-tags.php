@@ -48,15 +48,23 @@ function jose_post_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'jose' ); ?></h1>
-		<div class="nav-links">
-			<?php
-				previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'jose' ) );
-				next_post_link(     '<div class="nav-next">%link</div>',     _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link',     'jose' ) );
-			?>
-		</div><!-- .nav-links -->
-	</nav><!-- .navigation -->
+
+	<?php
+		previous_post_link( '<div class="item_nav nav-previous">%link</div>', _x( '<span class="meta-nav"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+<g id="icomoon-ignore">
+	<line stroke-width="1" x1="" y1="" x2="" y2="" stroke="#449FDB" opacity=""></line>
+</g>
+	<path d="M43.197 52.254c0.804 0.813 0.804 2.124 0 2.937s-2.103 0.813-2.907 0l-23.49-23.721c-0.804-0.813-0.804-2.127 0-2.937l23.49-23.724c0.804-0.813 2.103-0.813 2.907 0s0.804 2.124 0 2.937l-21.42 22.254 21.42 22.254z" class="blob"></path>
+</svg></span>&nbsp;', 'Previous post link', 'jose' ) );
+
+		next_post_link(     '<div class="item_nav nav-next">%link</div>',     _x( '&nbsp;<span class="meta-nav"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+<g id="icomoon-ignore">
+	<line stroke-width="1" x1="" y1="" x2="" y2="" stroke="#449FDB" opacity=""></line>
+</g>
+	<path d="M16.799 52.254c-0.804 0.813-0.804 2.124 0 2.937s2.103 0.813 2.907 0l23.49-23.721c0.804-0.813 0.804-2.127 0-2.937l-23.49-23.724c-0.804-0.813-2.103-0.813-2.907 0s-0.804 2.124 0 2.937l21.42 22.254-21.42 22.254z" class="blob"></path>
+</svg></span>', 'Next post link',     'jose' ) );
+	?>
+
 	<?php
 }
 endif;
@@ -123,6 +131,28 @@ function jose_categorized_blog() {
 		return false;
 	}
 }
+
+
+// add footer menu
+function jose_footer_nav() {
+    if ( has_nav_menu( 'footer' ) ) {
+	wp_nav_menu(
+		array(
+			'theme_location'  => 'footer',
+			'container'       => 'div',
+			'container_id'    => 'menu-footer',
+			'container_class' => 'site-footer grid',
+			'menu_id'         => 'menu-footer-items',
+			'menu_class'      => 'nav',
+			'depth'           => 1,
+			'fallback_cb'     => '',
+		)
+	);
+    }
+}
+
+
+
 
 /**
  * Flush out the transients used in jose_categorized_blog.

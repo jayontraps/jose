@@ -1,0 +1,31 @@
+.site-footer {
+	width: 100%;
+	@extend .group;
+	// position: absolute;
+	// bottom:0;
+	// left:0;
+
+	z-index: 10;
+	background-color: rgba(0,0,0, 0.5);	
+	// height: 100px;
+
+	ul {
+		padding:2em 5%;
+
+		li {
+			padding: 0 1em;
+			line-height: 1em;
+			border-right: 1px solid $off_white;
+			color: $off_white;
+			&:first-of-type {
+				padding-left: 0;
+			}			&:last-of-type {
+				border-right: none; 
+			}
+
+			a {
+				color: $off_white;
+			}
+		}
+	}
+}

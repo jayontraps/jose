@@ -1,14 +1,42 @@
 body {
 	height: 100%;
+	// background-color: #000;
+
+	&.light {
+		background-color: #fbfbfb;
+		color: $body_color;
+	}
+
+	&.dark {
+		background-color: #000;
+		color: $off_white;
+	}
 }
+
+
 
 .wrapper {
 	max-width: $max-width;
 	margin: 0 auto;
-	
+	overflow: hidden;
 }
 
 
+.hero {
+	position: absolute;
+	width: $max-width;
+	top:0;
+	z-index: 1;
+	@include breakpoint(mama-bear) {
+		position: relative;
+	}	
+}
+
+
+.content_wrap {
+	width: 90%;
+	margin:0 auto;
+}
 
 
 

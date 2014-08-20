@@ -1,6 +1,8 @@
 .grid {
   margin: 0 auto;
-  max-width:$max-width;
+  max-width:100%;
+  position: relative;
+  z-index: 100;
 
   &:after {
     /* Or @extend clearfix */
@@ -22,6 +24,9 @@
 }
 
  
+.col-1 {
+  width:100%;
+}
 
 .col-2-3 {
     width: 66.66%;
@@ -43,7 +48,7 @@
 
 .col-1-2 {
     width: 50%;
-    @include breakpoint( baby-bear) {
+    @include breakpoint( mama-bear) {
         float:none;
         width:100%;
     }    
@@ -51,7 +56,7 @@
 
 .col-1-4 {
     width: 25%;
-    @include breakpoint( baby-bear) {
+    @include breakpoint( mama-bear) {
         float:none;
         width:100%;
     }    
