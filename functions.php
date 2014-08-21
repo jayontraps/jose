@@ -147,9 +147,11 @@ function jose_scripts() {
 
 	wp_enqueue_script( 'jose-modenizr', get_template_directory_uri() . '/js/modernizr-2.8.0.min.js', array(), false);
 
-
+	// wp_enqueue_script( 'jose-Picturefill', get_template_directory_uri() . '/js/picturefill.min.js', array(), false);
 	// wp_enqueue_script( 'jose-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	// wp_enqueue_script( 'jose-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'jose-jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '20120206', true );
+
 	// combined above:
 	wp_enqueue_script( 'jose-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20120206', true );
 

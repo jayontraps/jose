@@ -10,7 +10,7 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" role="contentinfo">
+	<footer id="colophon" class="cf" role="contentinfo">
 
 		<?php jose_footer_nav(); ?>
 

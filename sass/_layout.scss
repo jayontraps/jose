@@ -25,6 +25,7 @@ body {
 .hero {
 	position: absolute;
 	width: $max-width;
+	height:100%;
 	top:0;
 	z-index: 1;
 	@include breakpoint(mama-bear) {

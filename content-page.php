@@ -8,7 +8,7 @@
 
 
 <div class="grid">
-    <div class="col-1-2">
+    <div id="post-<?php the_ID(); ?>" class="col-1-2">
         <!-- <div class="item-content">
  -->
 
@@ -29,7 +29,6 @@
 					) );
 				?>
 
-				<span class="brd-line"></span>
 			</div><!-- .entry-content -->
 		</article><!-- #post-## -->
 	</div>

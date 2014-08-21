@@ -1,10 +1,10 @@
+#colophon {
+	width:100%;
+	display: none;
+}
+
 .site-footer {
 	width: 100%;
-	@extend .group;
-	// position: absolute;
-	// bottom:0;
-	// left:0;
-
 	z-index: 10;
 	background-color: rgba(0,0,0, 0.5);	
 	// height: 100px;

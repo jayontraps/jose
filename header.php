@@ -20,7 +20,9 @@
 // Picture element HTML5 shiv
 document.createElement( "picture" );
 </script>
+
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/picturefill.min.js" async></script>
+
 </head>
 
 <?php

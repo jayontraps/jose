@@ -107,19 +107,34 @@
 }
 
 
+// over-rides for workshops page
+#post-23 {
 
-.tint {
-	background-color: rgba(0,0,0,0.5);
-	color: $off_white;
-	padding:1em;
-	margin-top:1em;
-
-	h1 {
-		color: $off_white;
+	.entry-content {
+		margin: 0;
 	}
 
-	.brd-line {
+	&.col-1-2 {
+		width: 33.33%;
+	    @include breakpoint( mama-bear) {
+	        float:none;
+	        width:100%;
+	    }  		
+	}
+
+	&.item-content {
+		background-color: rgba(0,0,0,0.5);
 		color: $off_white;
+		padding:1em;
+		margin-top:1em;
+
+		h1 {
+			color: $off_white;
+		}
+
+		.brd-line {
+			color: $off_white;
+		}
 	}
 }
 
