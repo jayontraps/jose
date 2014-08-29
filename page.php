@@ -15,17 +15,15 @@ get_header(); ?>
 <?php include 'inc/fullscreen-images.php'; ?>
 
 
+<main id="main" class="site-main content_wrap" role="main">
 
+	<?php while ( have_posts() ) : the_post(); ?>
 
-	<main id="main" class="site-main content_wrap" role="main">
+		<?php get_template_part( 'content', 'page' ); ?>
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<?php endwhile; // end of the loop. ?>
 
-			<?php get_template_part( 'content', 'page' ); ?>
-
-		<?php endwhile; // end of the loop. ?>
-
-	</main><!-- #main -->
+</main><!-- #main -->
 
 
 <?php get_footer(); ?>

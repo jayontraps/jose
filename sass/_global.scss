@@ -35,6 +35,21 @@ body {
 }
 
 
+.tint {
+	background-color: rgba(0,0,0,0.5);
+	color: $off_white;
+	padding:1em;
+	margin-top:1em;
+
+	h1 {
+		color: $off_white;
+	}
+
+	.brd-line {
+		color: $off_white;
+	}
+}
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/

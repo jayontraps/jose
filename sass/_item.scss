@@ -1,7 +1,9 @@
 .itemList {
 	width:50%;
-	margin:4em auto;
+	margin:3em auto;
 	padding:0;
+	position: relative;
+	z-index: 2;
 
 	ul {
 		margin:0;
@@ -12,7 +14,7 @@
 		@include column-gap(5px);
 
 		li {
-				list-style: disc;
+				list-style: none;
 				text-align: left;
 				margin-bottom:.2em;			
 			a {
@@ -40,6 +42,14 @@
 		
 	}
 
+	@include breakpoint(mama-bear) {
+		width:100%;	
+
+		ul {
+			@include column-count(1);
+			@include column-gap(0px);
+		}	
+	}
 }
 
 
@@ -52,6 +62,13 @@
 			margin-top: 0;
 		}
 	}	
+}
+
+// timedropper specific
+.post-35 {
+	.item-content {
+		@extend .tint;
+	}
 }
 
 .line {
@@ -78,24 +95,28 @@
 
 .videoHolder {
 	width: 100%;
-	margin-top: 1em;
-
-	// background:url(../images/KI_video.png) top left no-repeat;
-	// background-size: 100%;
-	
-
-	&.time {
-		background:url(../images/KI_video_3.png) top left no-repeat;
-	}
-
-	&._4m2 {
-		background:url(../images/KI_video_3.png) top left no-repeat;
-		width:500px;
-		height:320px;
-		background-size: 100%;
-	}	
-
+	// max-width: 600px;
+	margin-top: 1em;	
+	padding: 6px;
 }
+
+.dark {
+	.videoHolder {
+		background-color: rgba(255,255,255,0.5);
+	}
+	.post-35 {
+		.videoHolder {
+			background-color: rgba(0,0,0,0.5);
+		}
+	}
+}
+
+.light {
+	.videoHolder {
+		background-color: rgba(0,0,0,0.5);
+	}
+}
+
 
 
 .light {
@@ -105,6 +126,16 @@
 		}
 	}
 }
+
+
+.credentials {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	li {
+		list-style: none;
+	}
+}
+
 
 
 // over-rides for workshops page
@@ -123,18 +154,7 @@
 	}
 
 	&.item-content {
-		background-color: rgba(0,0,0,0.5);
-		color: $off_white;
-		padding:1em;
-		margin-top:1em;
-
-		h1 {
-			color: $off_white;
-		}
-
-		.brd-line {
-			color: $off_white;
-		}
+		@extend .tint;
 	}
 }
 

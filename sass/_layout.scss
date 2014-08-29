@@ -1,15 +1,21 @@
 body {
 	height: 100%;
-	// background-color: #000;
+	background-color: #000;
 
 	&.light {
-		background-color: #fbfbfb;
-		color: $body_color;
+		#page {
+			background-color: #fbfbfb;
+			color: $body_color;		
+		}
+
 	}
 
 	&.dark {
-		background-color: #000;
-		color: $off_white;
+		#page {
+			background-color: #000;
+			color: $off_white;		
+		}
+
 	}
 }
 
@@ -19,6 +25,7 @@ body {
 	max-width: $max-width;
 	margin: 0 auto;
 	overflow: hidden;
+	@include opacity(0);
 }
 
 
@@ -26,11 +33,19 @@ body {
 	position: absolute;
 	width: $max-width;
 	height:100%;
-	top:0;
+	top: 0;
+	left: 0;
 	z-index: 1;
 	@include breakpoint(mama-bear) {
 		position: relative;
 	}	
+}
+
+// timedropper specific 
+.post-35 {
+	.hero {
+		top: 62px;
+	}
 }
 
 
