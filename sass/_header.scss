@@ -33,13 +33,21 @@
 
 	a {
 		&:visited {
-			color: #fff;
+			color: $off_white;
 		}
 
 		&:hover {
 			color: $off_white;
 		}
-		color: #fff;
+		color: $off_white;
 		text-decoration: none;
+	}
+}
+
+.light {
+	.site-title {
+		a:visited {
+			color: $off_white;
+		}
 	}
 }

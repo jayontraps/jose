@@ -16,22 +16,44 @@ textarea  {
 
 
 /* Links */
-a {
-	color: $link_color;
-}
-a:visited {
-	color: $link_color;
-}
 
- .no-touch {
-
-	a:hover,
-	a:focus,
-	a:active {
-		color: $link_hover_color;
+.dark {
+	a {
+		color: $off_white;
 	}
 
+	a:visited {
+		color: $off_white;
+	}	
 }
+
+.light {
+	a {
+		color: $body_color;
+	}
+
+	a:visited {
+		color: $body_color;
+	}	
+}
+
+// a {
+// 	color: $link_color;
+// }
+
+// a:visited {
+// 	color: $link_color;
+// }
+
+//  .no-touch {
+
+// 	a:hover,
+// 	a:focus,
+// 	a:active {
+// 		color: $link_hover_color;
+// 	}
+
+// }
 
 
 // Disable default touch browser tap highlights

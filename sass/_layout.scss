@@ -40,13 +40,14 @@ body {
 		position: relative;
 	}	
 }
-
-// timedropper specific 
-.post-35 {
-	.hero {
-		top: 62px;
+@include breakpoint(mama-bear) {
+	.single-portfolio {
+		.hero {
+			display: none;
+		}
 	}
 }
+
 
 
 .content_wrap {

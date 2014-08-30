@@ -1,6 +1,25 @@
 (function($) {
 	$(document).ready(function() {
 
+
+		// addClass sm or lg on width detection
+		var breakpoint = 1025;
+		
+	    if($(document).width() >= breakpoint){
+			$('body').addClass("lg-screen");
+	    }	else {
+	    	$('body').addClass("sm-screen");
+	    }	
+		
+	    $(window).resize(function(){
+	        if($(document).width() >= breakpoint ){
+	        	$('body').removeClass("sm-screen").addClass('lg-screen');
+	        } else if($(document).width() < breakpoint) {
+	        	$('body').addClass("sm-screen").removeClass('lg-screen');
+	        }
+	    });
+	
+
 		// add slants to .nav-menu
 		// $('<span class="slant"></span>').appendTo('#menu-primary li');
 
@@ -199,6 +218,34 @@
 
 
 
+    //slide out gallery deatils
+    if ($('body').hasClass('lg-screen')) {
+	    $('body').on('click', '#readMore', function(e) {
+	        $('body').toggleClass('more-info-state');
+
+
+	        if ($(this).hasClass('opened')) {
+	            $('.secondaryWrap').toggleClass('on');
+	            $(this).removeClass('opened');
+	            $('#secondary-post').animate({
+	                left: "-100%",
+	                opacity: 0
+	              }, 400);
+	            $(this).html('More info &raquo;');
+
+	        } else {
+
+	            $(this).addClass('opened');
+	            $('.secondaryWrap').toggleClass('on');
+	            $('#secondary-post').animate({
+	                left: 0,
+	                opacity: 1
+	              }, 400); 
+	              $(this).html('&laquo; Less info') ;
+	            
+	        }            	     
+		});	
+	}	
 
 
 

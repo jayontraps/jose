@@ -1,5 +1,5 @@
 .itemList {
-	width:50%;
+	width:45%;
 	margin:3em auto;
 	padding:0;
 	position: relative;
@@ -41,6 +41,15 @@
 		}
 		
 	}
+
+	@include breakpoint(tab_land) {
+		width:70%;	
+
+		ul {
+			@include column-count(2);
+			@include column-gap(10px);
+		}	
+	}	
 
 	@include breakpoint(mama-bear) {
 		width:100%;	
@@ -95,7 +104,7 @@
 
 .videoHolder {
 	width: 100%;
-	// max-width: 600px;
+	max-width: 630px;
 	margin-top: 1em;	
 	padding: 6px;
 }
@@ -138,25 +147,8 @@
 
 
 
-// over-rides for workshops page
-#post-23 {
 
-	.entry-content {
-		margin: 0;
-	}
 
-	&.col-1-2 {
-		width: 33.33%;
-	    @include breakpoint( mama-bear) {
-	        float:none;
-	        width:100%;
-	    }  		
-	}
-
-	&.item-content {
-		@extend .tint;
-	}
-}
 
 
 
