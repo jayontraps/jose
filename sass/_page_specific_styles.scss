@@ -25,6 +25,16 @@
 	}
 }
 
+// contact page
+.contact {
+	.hero {
+		top: 62px;
+		@include breakpoint(mama-bear) {
+			top:0;
+		}		
+	}
+}
+
 // work page specific
 .post-15 {
 	.hero {

@@ -141,24 +141,28 @@ function jose_scripts() {
 
 	wp_enqueue_style('jose-fontsdotcom', 'http://fast.fonts.net/cssapi/6d7687f4-16fc-4c67-aea7-bab36c3d5397.css');
 
-	wp_enqueue_style( 'jose-google-fonts', 'http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|News+Cycle');
+	wp_enqueue_style( 'jose-google-fonts', 'http://fonts.googleapis.com/css?family=News+Cycle');
 
-	wp_enqueue_style( 'jose-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'jose-style-definition', get_stylesheet_uri(), array());
 
-	wp_enqueue_script( 'jose-modenizr', get_template_directory_uri() . '/js/modernizr-2.8.0.min.js', array(), false);
+	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/css/screen.css', array(), '201410' );
+
+	wp_enqueue_script( 'jose-modenizr', get_template_directory_uri() . '/plugins/modernizr-2.8.0.min.js', array(), false);
 
 	// wp_enqueue_script( 'jose-Picturefill', get_template_directory_uri() . '/js/picturefill.min.js', array(), false);
 	// wp_enqueue_script( 'jose-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	// wp_enqueue_script( 'jose-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-	wp_enqueue_script( 'jose-jquery-cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'), '20120206', true );
 
-	wp_enqueue_script( 'jose-jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '20120206', true );
+	// wp_enqueue_script( 'jose-jquery-cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'), '20120206', true );
 
+	// wp_enqueue_script( 'jose-jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '20120206', true );
 
-	// combined above:
-	wp_enqueue_script( 'jose-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20120206', true );
+	// // combined above:
+	// wp_enqueue_script( 'jose-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'jose-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '20140808', true );
+	// wp_enqueue_script( 'jose-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '20140902', true );
+
+	wp_enqueue_script( 'jose-build', get_template_directory_uri() . '/build_scripts/built.min.js', array('jquery'), '20140910', true );		
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -190,3 +194,39 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+/**
+ * Customize Adjacent Post Link Order
+ */
+function my_custom_adjacent_post_where($sql) {
+	if ( !is_main_query() || !is_singular() )
+		return $sql;
+	
+	$the_post = get_post( get_the_ID() );
+	$patterns = array();
+	$patterns[] = '/post_date/';
+	$patterns[] = '/\'[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2}\'/';
+	$replacements = array();
+	$replacements[] = 'menu_order';
+	$replacements[] = $the_post->menu_order;
+	return preg_replace( $patterns, $replacements, $sql );
+}
+add_filter( 'get_next_post_where', 'my_custom_adjacent_post_where' );
+add_filter( 'get_previous_post_where', 'my_custom_adjacent_post_where' );
+
+function my_custom_adjacent_post_sort($sql) {
+	if ( !is_main_query() || !is_singular() )
+		return $sql;
+	
+	$pattern = '/post_date/';
+	$replacement = 'menu_order';
+	return preg_replace( $pattern, $replacement, $sql );
+}
+add_filter( 'get_next_post_sort', 'my_custom_adjacent_post_sort' );
+add_filter( 'get_previous_post_sort', 'my_custom_adjacent_post_sort' );
+
+
+
+
+

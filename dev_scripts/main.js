@@ -20,8 +20,10 @@
 	    });
 	
 
-		// add slants to .nav-menu
-		// $('<span class="slant"></span>').appendTo('#menu-primary li');
+
+
+
+
 
 
 		// position footer  			
@@ -36,7 +38,7 @@
 				footerContainer.css({
 					position: 'absolute',
 					top: targetHeight,
-					display: 'block'
+					display: 'block'			// hide as requested
 					}).parent().animate({ // reveal content
 						opacity: 1
 					}, 200);
@@ -44,7 +46,7 @@
 				footerContainer.css({
 					top: 'auto',
 					position : 'relative',
-					display: 'block'
+					display: 'block'			// hide as requested
 					}).parent().animate({ // reveal content
 						opacity: 1
 					}, 200);
@@ -70,6 +72,9 @@
 				});
 	        }
 	    });	
+
+
+
 
 
 
@@ -113,14 +118,13 @@
 
 
 
-
+    	// override video function by forcing the cookie
+    	$.cookie('return_visit', '1');
 
 		function videoRemoved() {
 			$('header').removeClass('playVideo');
 			$('.hero').fadeIn('slow');			
 		}
-
-
 
         function autoLoadVideo(mq) {
 

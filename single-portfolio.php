@@ -49,7 +49,7 @@ get_header(); ?>
 							<li>
 
 								<?php if( $role ): ?>
-									<span class="cred_role"><?php echo $role; ?></span>
+									<span class="cred_role"><?php echo $role; ?>: </span>
 								<?php endif; ?>
 
 								<?php if( $name ): ?>

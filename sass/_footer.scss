@@ -4,8 +4,10 @@
 }
 
 .site-footer {
-	width: 100%;
+	width: 90%;
+	margin: 0 auto;
 	z-index: 10;
+	height:60px;
 	background-color: rgba(0,0,0, 0.5);	
 	// height: 100px;
 
@@ -28,4 +30,12 @@
 			}
 		}
 	}
+}
+
+.credits {
+	float:right;
+	padding: 1em;
+	font-style: italic;
+	font-size: .9em;
+	color: $light_grey;
 }

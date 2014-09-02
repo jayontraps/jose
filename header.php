@@ -11,6 +11,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="MY7rMCG8q_9269Vc1Qe7ei_qLOOhhnf_1RsDnv-s0qI" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -21,7 +22,7 @@
 document.createElement( "picture" );
 </script>
 
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/picturefill.min.js" async></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/plugins/picturefill.min.js" async></script>
 
 </head>
 
@@ -42,18 +43,6 @@ document.createElement( "picture" );
 <!-- 		<button id="navicon" class="menu-toggle"><?php _e( 'Primary Menu', 'jose' ); ?></button>
  -->
 		
-<!-- 
-		<svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
-		<g id="icomoon-ignore">
-			<line stroke-width="1" x1="" y1="" x2="" y2="" stroke="#449FDB" opacity=""></line>
-		</g>
-			<path d="M32 18h-24c-1.104 0-2 0.896-2 2s0.896 2 2 2h24c1.106 0 2-0.896 2-2s-0.894-2-2-2zM8 14h24c1.106 0 2-0.896 2-2s-0.894-2-2-2h-24c-1.104 0-2 0.896-2 2s0.896 2 2 2zM32 26h-24c-1.104 0-2 0.894-2 2s0.896 2 2 2h24c1.106 0 2-0.894 2-2s-0.894-2-2-2z" fill="#ffffff"></path>
-		</svg>
-
-
- -->
-
-
  <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
 <rect x="6" y="9" width="28" height="2"/>

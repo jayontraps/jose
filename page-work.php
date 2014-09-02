@@ -10,15 +10,15 @@ get_header(); ?>
 
 	<main id="main" class="site-main content_wrap" role="main">
 
-		<?php // while ( have_posts() ) : the_post(); ?>
-		<?php // endwhile; // end of the loop. ?>
-		<div class="itemList">
+		<?php while ( have_posts() ) : the_post(); ?>
+
+		<div id="post-<?php the_ID(); ?>" class="itemList">
 			<ul>
 			<?php 	
 				$my_query = new WP_Query(array( 
 					'post_type' => 'portfolio', 
 					'posts_per_page' => 8,
-					'orderby' => 'meta_value_num',
+					'orderby' => 'menu_order',
 					'order' => 'ASC' 
 					));
 
@@ -28,14 +28,18 @@ get_header(); ?>
 
 			<?php endwhile; 
 
-			// wp_reset_query();
+				wp_reset_query();
 
 			?>
 
 			</ul>	
-		</div><!-- .itemList -->		
+		</div><!-- .itemList -->	
+
+	<?php endwhile; // end of the loop. ?>
 
 	</main><!-- #main -->
+
+	
 
 
 <?php get_footer(); ?>
