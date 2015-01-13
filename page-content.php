@@ -28,6 +28,7 @@ if( !empty($fullscreen_image) ): ?>
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<div class="grid">
+			
 		    <div id="post-<?php the_ID(); ?>" class="col-1-3">
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class('item-content primary'); ?>>
@@ -71,6 +72,18 @@ if( !empty($fullscreen_image) ): ?>
 								<?php if(get_field('more')){
 									echo get_field('more');
 								} ?>	
+
+
+
+								<?php 
+									if (is_page( "workshops" )) {
+										get_template_part( 'content', 'workshops' ); 
+									}								
+								?>
+
+
+
+
 				                                     	                  
 							</div>
 						</article>

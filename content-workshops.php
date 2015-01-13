@@ -1,35 +1,11 @@
+<header class="entry-header">							
+	<h1 class="entry-title">Upcoming Workshops</h1>
+</header><!-- .entry-header -->
+<span class="brd-line"></span>
+
+<ul class="calendar_list ws_list">
+
 <?php
-/*
-	Template Name: calendar page
-*/
-
-get_header(); ?>
-	
-<?php include 'inc/fullscreen-images.php'; ?>
-
-
-<main id="main" class="site-main content_wrap" role="main">
-
-	<?php while ( have_posts() ) : the_post(); ?>
-
-	<div class="grid">
-	    <div id="post-<?php the_ID(); ?>" class="col-1-2">
-	        <!-- <div class="item-content">
-	 -->
-
-			<article id="post-<?php the_ID(); ?>" <?php post_class('item-content'); ?>>
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</header><!-- .entry-header -->
-				<span class="brd-line"></span>
-
-				<div class="entry-content">
-					<?php// the_content(); ?>
-
-
-				<ul class="calendar_list">
-
-<?php 
 
 	$temp = $wp_query; 
 	$wp_query = null; 
@@ -38,7 +14,7 @@ get_header(); ?>
 	$today = date('Ymd');
 
 	$args = array (			
-		'post_type' => 'events',
+		'post_type' => 'workshops',
 		'posts_per_page' => 10,
 		'paged' => $paged,
 		'cat' => -4,	
@@ -112,6 +88,8 @@ get_header(); ?>
 
 </ul>
 <span class="brd-line"></span>
+<br>
+<br>
 
 <?php /* Display navigation to next/previous pages when applicable */ ?>
 <?php if ( function_exists('jose_pagination') ) { jose_pagination(); } else if ( is_paged() ) { ?>
@@ -127,20 +105,3 @@ get_header(); ?>
   $wp_query = $temp;  // Reset
   wp_reset_postdata();
 ?>		
-
-
-
-
-
-
-				</div><!-- .entry-content -->
-			</article><!-- #post-## -->
-		</div>
-	</div>
-
-	<?php endwhile; // end of the loop. ?>
-
-</main><!-- #main -->
-
-
-<?php get_footer(); ?>

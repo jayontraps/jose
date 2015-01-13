@@ -119,7 +119,7 @@
 
 
     	// override video function by forcing the cookie
-    	$.cookie('return_visit', '1');
+    	// $.cookie('return_visit', '1');
 
 		function videoRemoved() {
 			$('header').removeClass('playVideo');

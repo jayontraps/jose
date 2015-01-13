@@ -2,16 +2,20 @@
 .secondaryWrap {
 	position: relative;
 	width: 100%;
-	min-height:700px;
-	overflow: hidden;
+	// min-height:700px;
+	// overflow: hidden;
 
 	@include breakpoint(tab_land) {
 		min-height: 400px;
 	}
 
+	&.on {
+		#secondary-post {
+			position: relative;
+		}
+	}
+
 }
-
-
 
 #secondary-post {
 	width: 100%;
@@ -77,7 +81,7 @@
 	}
 	ul {
 		margin-left:0;
-		padding-left: 1em;
+		padding-left:0;
 	}
 }
 

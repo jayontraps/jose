@@ -18,6 +18,14 @@
 	}
 }
 
+// over-rides for Calendar page
+
+#post-143 {
+	&.item-content {
+		@extend .tint;
+	}	
+}
+
 // timedropper specific 
 .post-35 {
 	.hero {

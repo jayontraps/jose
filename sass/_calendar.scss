@@ -1,33 +1,43 @@
-.post-21, .post-143 {
-	background-color: #FEFEFE;
-}
+// .post-21, .post-143 {
+// 	background-color: #FEFEFE;
+// }
 
-.news {
-	.calendar_list {
-		margin: 0;
-		padding: 0;
-		list-style: none;
 
-		li {
-			width: 100%;
-			// margin: 0 0 1em;
+.calendar_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 
-			.meta_grid {
-				display: inline-block;
+	li {
+		width: 100%;
+		// margin: 0 0 1em;
 
-				&.location {
-					padding-right: 1em;
-				}
-				font-style: italic;
-				color: lighten($body_color, 30%);
+		.meta_grid {
+			display: inline-block;
+
+			&.location {
+				padding-right: 1em;
 			}
+			font-style: italic;
+			color: lighten($body_color, 50%);
+		}
 
-			.description {
-				line-height: 1em;
+		.description {
+			line-height: 1em;
+
+			p {
+				margin: 0;
 			}
 		}
-	}	
+	}
+}	
+
+
+.ws_list {
+	margin: 2em 0;
 }
+
+
 
 
 .pagination {
@@ -43,7 +53,7 @@
 
 		&.current {
 			a {
-				color: $body_color;
+				color: $off_white;
 			}
 		}
 	}
