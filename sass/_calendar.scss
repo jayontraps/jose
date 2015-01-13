@@ -1,0 +1,50 @@
+.post-21, .post-143 {
+	background-color: #FEFEFE;
+}
+
+.news {
+	.calendar_list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			width: 100%;
+			// margin: 0 0 1em;
+
+			.meta_grid {
+				display: inline-block;
+
+				&.location {
+					padding-right: 1em;
+				}
+				font-style: italic;
+				color: lighten($body_color, 30%);
+			}
+
+			.description {
+				line-height: 1em;
+			}
+		}
+	}	
+}
+
+
+.pagination {
+	text-align: center;
+	li {
+		display: inline-block;
+		a, a:visited {
+			// font-family: $heading_font;
+			display: block;
+			padding: .5em;
+			color: lighten($body_color, 50%);
+		}
+
+		&.current {
+			a {
+				color: $body_color;
+			}
+		}
+	}
+}

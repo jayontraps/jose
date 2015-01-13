@@ -16,7 +16,7 @@ if( !empty($fullscreen_image) ): ?>
             <!--[if IE 9]><video style="display: none;"><![endif]-->
             <source srcset="<?php echo $fullscreen_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>" media="(min-width: 770px)">
             <!--[if IE 9]></video><![endif]-->
-            <img srcset="<?php echo $mobile_image['url']; ?>" alt="<?php echo $mobile_image['alt']; ?>">
+            <img srcset="<?php echo $mobile_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>">
         </picture>  
     </div>
 
