@@ -26,6 +26,10 @@ body {
 	margin: 0 auto;
 	overflow: hidden;
 	@include opacity(0);
+
+	// @include breakpoint(tab_land) {
+	// 	overflow: visible;
+	// }
 }
 
 

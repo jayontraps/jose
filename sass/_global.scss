@@ -120,6 +120,31 @@ b, strong {
 
 
 
+.fb {
+	&:hover {
+
+		path {
+			fill:$light_grey;
+		}
+
+		
+	}
+}
+
+
+#mc_embed_signup {
+
+	label,
+	input[type="email"],
+	input[type="submit"]	{
+		display: block;
+		margin-bottom: 1em;
+	}
+}
+
+
+
+
 
 /* Text meant only for screen readers */
 .screen-reader-text {

@@ -1,13 +1,18 @@
-
 .secondaryWrap {
 	position: relative;
 	width: 100%;
 	// min-height:700px;
 	// overflow: hidden;
 
-	@include breakpoint(tab_land) {
-		min-height: 400px;
-	}
+	// @include breakpoint(tab_land) {
+	// 	min-height: 400px;
+	// }
+	// @include breakpoint(mama-bear) {
+	// 	min-height: 800px;
+	// }
+	// @include breakpoint(baby-bear) {
+	// 	min-height: 10000px;
+	// }
 
 	&.on {
 		#secondary-post {
