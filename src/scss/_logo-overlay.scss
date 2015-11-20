@@ -1,0 +1,104 @@
+.logo-layer {
+	position: absolute;
+	z-index: 3;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	// animation-name: fadeOut;
+	// animation-delay: 2s;
+	// animation-duration: 3s;
+	// -webkit-animation-duration: 3s;
+	// -webkit-animation-fill-mode: both;
+	// animation-fill-mode: both;
+}
+
+
+.logo-wrap {
+	width: 40%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.f-name {
+	fill: #892B2B;
+}
+
+.l-name {
+	fill: #fafafa;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.fadeIn {
+	-webkit-animation: fadeIn 2s ease both;
+	animation: fadeIn 2s ease both;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+// .fadeOut {
+// 	-webkit-animation: fadeOut 3s ease both;
+// 	animation: fadeOut 3s ease both;	
+// }
+
+// @keyframes fadeOut {
+// 	from { opacity: 1; }
+// 	to { opacity: 0; }
+// }
+
+
+.c-shape {
+	animation-name: fadeIn;
+}
+
+
+#c-shape-1 {
+	// animation-delay: 100ms;
+	
+}
+#c-shape-2 {
+	animation-delay: 100ms;
+	
+}
+#c-shape-3 {
+	animation-delay: 200ms;
+	
+}
+#c-shape-4 {
+	animation-delay: 300ms;
+	
+}
+#c-shape-5 {
+	animation-delay: 400ms;
+	
+}
+#c-shape-6 {
+	animation-delay: 500ms;
+	
+}
+#c-shape-7 {
+	animation-delay: 600ms;
+	
+}
+#c-shape-8 {
+	animation-delay: 700ms;
+	
+}
+#c-shape-9 {
+	animation-delay: 800ms;
+	
+}
+

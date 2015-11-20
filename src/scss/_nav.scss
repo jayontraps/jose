@@ -38,10 +38,10 @@
 }
 .main-navigation ul {
     list-style: none;
-    margin: .75em 0 0 0;
+    margin: 20px 0 0 0;
     padding:0;
     font-family: $heading_font;
-
+    font-weight: $heading_weight;
     > li {
 
             &:last-of-type {
@@ -301,21 +301,21 @@
      
     a {
         text-decoration: none;
-        @include opacity(0);
-        @include transition-property(opacity);
-        @include transition-duration(0.5s);
-        @include transition-timing-function(ease-in); 
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in; 
 
         &:hover {
-            @include opacity(1);
+            opacity: 1;
         }     
     }
 
     &.on {
         a {
-            @include opacity(.5);
+            opacity: .5;
             &:hover {
-                @include opacity(1);
+                opacity: 1;
             }            
         }        
     }      

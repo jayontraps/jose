@@ -31,38 +31,38 @@ document.createElement( "picture" );
 	$class = get_post_meta( $post->ID, "body_class", true );
 ?>
 <body <?php body_class($class); ?>>
+
 <div id="page" class="hfeed site wrapper">
+
+	<?php include "inc/logo-layer.php"; ?>
+
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jose' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+		<div class="site_logo">
+			
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
+				<h1 class="site-title">Jose Agudo</h1>			
+			</a>
+	
 		</div>
 
-<!-- 		<button id="navicon" class="menu-toggle"><?php // _e( 'Primary Menu', 'jose' ); ?></button>
- -->
+
+		 <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+			<rect x="6" y="9" width="28" height="2"/>
+			<rect x="6" y="18" width="28" height="2"/>
+			<rect x="6" y="27" width="28" height="2"/>
+		</svg>
 
 
+		<nav id="site-navigation" class="main-navigation" role="navigation">			
+			<?php jose_primary_nav(); ?>
+		</nav>
 
- <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<rect x="6" y="9" width="28" height="2"/>
-<rect x="6" y="18" width="28" height="2"/>
-<rect x="6" y="27" width="28" height="2"/>
-</svg>
-
-
-
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			
-			<?php 
-				jose_primary_nav();
-				// wp_nav_menu( array( 	
-				// 				'theme_location' => 'primary' ) ); 
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	</header>
 
 
 
@@ -85,30 +85,18 @@ document.createElement( "picture" );
 	
 	
 	<div id="playBtn" style="display: none">
-			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 100 100" xml:space="preserve" preserveAspectRatio="xMinYMin meet" class="svg-content">
 
-	<!-- viewBox="5.0 -10.0 100.0 135.0" -->
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 100 100" xml:space="preserve" preserveAspectRatio="xMinYMin meet" class="svg-content">
+			<!-- viewBox="5.0 -10.0 100.0 135.0" -->
+			<g id="Play">
+			<circle fill="none" stroke-width="1" stroke-miterlimit="10" cx="19.437" cy="19.725" r="18.291"/>
+			<polygon fill="none" stroke-width="1" stroke-miterlimit="10" points="12.5,7.924 32.067,19.222 12.5,30.519 "/>
+			</g>
 
-	<g id="Play">
-
-
-<circle fill="none" stroke-width="1" stroke-miterlimit="10" cx="19.437" cy="19.725" r="18.291"/>
-
-<polygon fill="none" stroke-width="1" stroke-miterlimit="10" points="12.5,7.924 32.067,19.222 12.5,30.519 "/>
-<!-- points="83.5,42.667 268.926,149.723 83.5,256.777 " -->
-<!-- 
-		<circle fill="none"  stroke-width="1" stroke-miterlimit="10" cx="50" cy="49.998" r="47"/>
-		<polygon fill="none" stroke-width="1" stroke-miterlimit="10" points="36,28 72,49.96 36,71.921  "/>
-
- -->
-	</g>
-
-</svg>
-
-
-
-
+		</svg>
 
 	</div>
+
+
 
 	<div id="content" class="content">
