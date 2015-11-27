@@ -31,37 +31,40 @@ document.createElement( "picture" );
 	$class = get_post_meta( $post->ID, "body_class", true );
 ?>
 <body <?php body_class($class); ?>>
+
 <div id="page" class="hfeed site wrapper">
+
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jose' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+		<div class="inner-header">
+
+			<div class="site_logo">
+				
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
+					<h1 class="site-title">Jose Agudo</h1>			
+				</a>
+		
+			</div>
+			
+			
+			 <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+			<rect x="6" y="9" width="28" height="2"/>
+			<rect x="6" y="18" width="28" height="2"/>
+			<rect x="6" y="27" width="28" height="2"/>
+			</svg>
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">				
+				<?php jose_primary_nav(); ?>
+			</nav>
+
 		</div>
 
-<!-- 		<button id="navicon" class="menu-toggle"><?php _e( 'Primary Menu', 'jose' ); ?></button>
- -->
-		
- <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-<rect x="6" y="9" width="28" height="2"/>
-<rect x="6" y="18" width="28" height="2"/>
-<rect x="6" y="27" width="28" height="2"/>
-</svg>
-
-
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			
-			<?php 
-				jose_primary_nav(); 	
-
-				// wp_nav_menu( array( 	
-				// 				'theme_location' => 'primary' ) ); 
-
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
+
 
 	<div id="content" class="content post-<?php the_ID(); ?>">
 

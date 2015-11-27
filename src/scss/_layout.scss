@@ -1,5 +1,4 @@
 body {
-	// height: 100%;
 	background-color: #000;
 
 	&.light {
@@ -7,7 +6,6 @@ body {
 			background-color: #fbfbfb;
 			color: $body_color;		
 		}
-
 	}
 
 	&.dark {
@@ -15,28 +13,28 @@ body {
 			background-color: #000;
 			color: $off_white;		
 		}
-
 	}
 }
 
 
-
 .wrapper {
 	max-width: $max-width;
+	height: 100%;	
 	margin: 0 auto;
 	overflow: hidden;
-	@include opacity(0);
-
-	// @include breakpoint(tab_land) {
-	// 	overflow: visible;
-	// }
+	opacity: 0;
 }
 
+
+.home {
+	.wrapper {
+		height: 100vh;
+	}
+}
 
 .hero {
 	position: absolute;
 	width: $max-width;
-	// height:100%;
 	top: 0;
 	left: 0;
 	z-index: 1;
@@ -44,6 +42,8 @@ body {
 		position: relative;
 	}	
 }
+
+
 @include breakpoint(mama-bear) {
 	.single-portfolio {
 		.hero {
@@ -55,7 +55,7 @@ body {
 
 
 .content_wrap {
-	width: 90%;
+	width: 95%;
 	margin:0 auto;
 }
 

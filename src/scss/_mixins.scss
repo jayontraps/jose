@@ -8,24 +8,24 @@
   }
 
    @else if $point == tab_land  {
-    @media (max-width : 1024px) { @content; }
+    @media (max-width : $tab_land) { @content; }
   }
 
   @else if $point == tab_port  {
-    @media (max-width : 1000px) { @content; }
+    @media (max-width : $tab_port) { @content; }
   }
 
   @else if $point == mama-bear {
-    @media (max-width: 768px)  { @content; }
+    @media (max-width: $mama-bear )  { @content; }
   }
 
   @else if $point == baby-bear {
-    @media (max-width: 560px)  { @content; }
+    @media (max-width: $baby-bear)  { @content; }
   }
 
 
   @else if $point == slide_switch {
-    @media (max-width: 480px)  { @content; }
+    @media (max-width: $slide_switch)  { @content; }
   }
 
 }

@@ -10,8 +10,8 @@
 		padding: 0;
 		list-style: none;
 
-		@include column-count(2);
-		@include column-gap(5px);
+		column-count: 2;
+		column-gap: 5px;
 
 		li {
 				list-style: none;
@@ -24,20 +24,14 @@
 				font-size: 1em;	
 				color:$off_white;
 				text-decoration: none;
-				// padding:0 2em;
 				line-height:1em;
-				// border-left: 1px solid $off_white;
+
 
 				&:hover {
 					text-decoration: underline;
 				}
 			}
 
-			&:last-of-type {
-				a {
-					// border-right: 1px solid $off_white;
-				}
-			}
 		}
 		
 	}
@@ -46,8 +40,8 @@
 		width:70%;	
 
 		ul {
-			@include column-count(2);
-			@include column-gap(10px);
+			column-count: 2;
+			column-gap: 10px;
 		}	
 	}	
 
@@ -55,8 +49,8 @@
 		width:100%;	
 
 		ul {
-			@include column-count(1);
-			@include column-gap(0px);
+			column-count: 1;
+			column-gap: 0px;
 		}	
 	}
 }
@@ -89,16 +83,16 @@
 	margin: 2em 0;
 	padding: 0;
 	@extend .group;
-	@include column-count(2);
-	@include column-gap(20px);	
+	column-count: 2;
+	column-gap: 20px;	
 
 	p {
 		margin-top:0;
 	}
 
 	@include breakpoint(baby-bear) {
-		@include column-count(1);
-		@include column-gap(0px);		
+		column-count: 1;
+		column-gap: 0px;		
 	}
 }
 

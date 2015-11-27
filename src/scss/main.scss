@@ -1,12 +1,6 @@
-
-@import "compass";
-// @import "fonts";
 @import "vars";
 @import "mixins";
 @import "normalize";
-// @import "_style"; // = complete underscore
-
-// @import "reset";
 @import "underscore";
 @import "grid";
 @import "global";
@@ -19,7 +13,9 @@
 @import "content-page";
 @import "calendar";
 @import "vid-overlay";
-@import "_page_specific_styles";
+@import "page_specific_styles";
+@import "logo-overlay";
+@import "components/Media";
 @import "helpers";
 // @import "style-guide";
 

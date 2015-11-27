@@ -139,30 +139,23 @@ add_action( 'widgets_init', 'jose_widgets_init' );
  */
 function jose_scripts() {
 
-	wp_enqueue_style('jose-fontsdotcom', 'http://fast.fonts.net/cssapi/6d7687f4-16fc-4c67-aea7-bab36c3d5397.css');
+	// wp_enqueue_style('jose-fontsdotcom', 'http://fast.fonts.net/cssapi/6d7687f4-16fc-4c67-aea7-bab36c3d5397.css');
 
-	wp_enqueue_style( 'jose-google-fonts', 'http://fonts.googleapis.com/css?family=News+Cycle');
+	// wp_enqueue_style( 'jose-google-fonts', 'http://fonts.googleapis.com/css?family=News+Cycle');
+	wp_enqueue_style( 'jose-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,300,100');	
+
+	
 
 	wp_enqueue_style( 'jose-style-definition', get_stylesheet_uri(), array());
 
-	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/css/screen.css', array(), '201502' );
+	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/build/css/main.css', array(), '20151126' );
 
 	wp_enqueue_script( 'jose-modenizr', get_template_directory_uri() . '/plugins/modernizr-2.8.0.min.js', array(), false);
 
-	// wp_enqueue_script( 'jose-Picturefill', get_template_directory_uri() . '/js/picturefill.min.js', array(), false);
-	// wp_enqueue_script( 'jose-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	// wp_enqueue_script( 'jose-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	// loading in the header
+	// wp_enqueue_script( 'jose-Picturefill', get_template_directory_uri() . '/plugins/picturefill.min.js', array(), false);
 
-	// wp_enqueue_script( 'jose-jquery-cookie', get_template_directory_uri() . '/js/jquery.cookie.js', array('jquery'), '20120206', true );
-
-	// wp_enqueue_script( 'jose-jquery-fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '20120206', true );
-
-	// // combined above:
-	// wp_enqueue_script( 'jose-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20120206', true );
-
-	// wp_enqueue_script( 'jose-main', get_template_directory_uri() . '/js/main.js', array('jquery'), '20140902', true );
-
-	wp_enqueue_script( 'jose-build', get_template_directory_uri() . '/build_scripts/built.min.js', array('jquery'), '201502', true );		
+	wp_enqueue_script( 'jose-build', get_template_directory_uri() . '/build/js/all.min.js', array('jquery'), '20151126', true );		
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

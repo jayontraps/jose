@@ -1,0 +1,238 @@
+/* -----------------------------------------
+   Navigation Styles
+----------------------------------------- */
+
+
+.nav{
+    list-style:none;
+    margin-left:0;
+    @extend .cf;
+
+    > li{
+
+        &.active > a {
+            }        
+        &,
+        > a{
+            display:inline-block;
+           *display:inline;
+            zoom:1;
+            text-decoration:none;
+            :hover {
+                text-decoration:none;
+            }
+
+        }
+    }
+}
+
+
+/* from underscores style.css = Menu
+----------------------------------------------- */
+
+.main-navigation {
+    display: block;
+    float: right;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 21px 0 0 0;
+    padding:0;
+    font-family: $heading_font;
+    font-weight: $heading_weight;
+    font-size: $smaller-font-size;
+    
+    > li {
+
+            &:last-of-type {
+                margin-right: 0;
+                padding-right: 0;
+                .slant {
+                    opacity: 0;
+                }
+            }
+        > a {
+            padding:1em;
+            color: $off_white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: .9em;
+            line-height: .9em;
+
+            &:hover {
+                text-decoration:underline;
+            }
+
+            &:visited {
+                color: $off_white;
+            }
+        }
+
+        .slant {
+            position: absolute;
+            right:0;
+            top:-5px;
+            width: 40px;
+            height: 40px;
+            margin-bottom: -1em;
+
+            svg {
+                fill: $off_white;
+                display: block;
+                padding-bottom: 6px;
+            }
+        }
+    }  
+
+    @include breakpoint(mama-bear){
+        padding-bottom: 1em;
+        background-color: rgba(255,255,255,0.5);
+    }  
+}
+
+
+@media only screen and (max-width : 1120px) {
+    .main-navigation ul > li > a {
+        padding: 0;
+    }
+}
+
+
+.main-navigation {
+    &.toggled {
+        .slant {
+            display: none;
+        }
+    }
+} 
+
+.main-navigation li {
+    float: left;
+    position: relative;
+    padding-right:40px;
+
+    @include breakpoint(mama-bear) {
+        padding-right: 0;
+    }
+}
+
+
+.main-navigation ul li:hover > ul {
+    display: block;
+}
+
+
+/* Small menu */
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+@include breakpoint (mama-bear) {
+    .menu-toggle,
+    .main-navigation.toggled .nav-menu {
+        display: block;
+    }
+
+    .menu-toggle {
+        width: 40px;
+        height:40px;
+        float:right;
+        margin:10px;
+    }
+
+    svg#navicon {
+        fill: #FFFFFF;
+    }
+
+    .main-navigation {
+        float: none;
+        clear: both;
+    }
+
+    .main-navigation ul {
+
+        display: none;
+
+        li {
+            float: none;
+            width: 100%;
+
+            a { 
+                display: block;
+                text-align: center;
+                padding:1em .5em 1em .5em;
+
+            }
+        }
+    }
+}
+
+
+.blob {
+    fill: $body_color;
+}
+
+.dark {
+    .blob {
+        fill: $off_white;
+    }  
+}
+
+
+
+.item_nav {
+    position: fixed;
+    z-index: 2;
+    top:50%;
+     
+    a {
+        text-decoration: none;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in; 
+
+        &:hover {
+            opacity: 1;
+        }     
+    }
+
+    &.on {
+        a {
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }            
+        }        
+    }      
+
+    &.nav-previous {
+        left:0;
+    }
+
+    &.nav-next {
+        right:0;
+    }    
+}
+
+
+/* inbetween ----------- */
+@media only screen and (min-width : $mama-bear) and (max-width : 960px) {
+
+    .main-navigation {
+        clear: both;
+        float: left;
+    }    
+
+    .site-header {
+        height: 120px;
+    }
+}
+
+
+
+
+
+

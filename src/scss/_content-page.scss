@@ -32,13 +32,13 @@
 .lg-screen {
 	#secondary-post {
 		left:-100%;
-		@include opacity(0);		
+		opacity: 0;		
 	}
 }
 .sm-screen {
 	#secondary-post {
 		left:0;
-		@include opacity(1);
+		opacity: 1;
 		margin-top: 0;	
 
 		h1 {
