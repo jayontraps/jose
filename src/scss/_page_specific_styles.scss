@@ -6,7 +6,7 @@
 	}
 
 	&.col-1-2 {
-		width: 33.33%;
+		// width: 33.33%;
 	    @include breakpoint( mama-bear) {
 	        float:none;
 	        width:100%;
@@ -50,5 +50,11 @@
 		@include breakpoint(mama-bear) {
 			top:0;
 		}
+	}
+}
+
+.media {
+	.entry-title {
+		margin-top: 1.5em;
 	}
 }

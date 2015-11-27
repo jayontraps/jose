@@ -181,7 +181,7 @@ function jose_primary_nav() {
 			'container_class' 	=> 'menu-primary-container',
 			'menu_id'         	=> 'menu-primary',
 			'menu_class'      	=> 'menu nav-menu cf',	
-			'after'				=> '<span class="slant"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve"><rect x="-6.842" y="18.658" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.2841 20.0002)" width="53.686" height="1"/></svg></span>',		
+			'after'				=> '<span class="slant"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 35 35" xml:space="preserve"><rect x="-6.842" y="18.658" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -8.2841 20.0002)" width="53.686" height="1"/></svg></span>',		
 			'depth'           	=> 1,
 			'fallback_cb'     	=> '',
 		)

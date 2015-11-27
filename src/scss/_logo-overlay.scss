@@ -21,7 +21,12 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	@include breakpoint(mama-bear) {
+		width: 90%;
+	}
 }
+
+
 
 .f-name {
 	fill: #892B2B;
@@ -70,35 +75,35 @@
 	
 }
 #c-shape-2 {
-	animation-delay: 100ms;
+	animation-delay: 150ms;
 	
 }
 #c-shape-3 {
-	animation-delay: 200ms;
-	
-}
-#c-shape-4 {
 	animation-delay: 300ms;
 	
 }
+#c-shape-4 {
+	animation-delay: 450ms;
+	
+}
 #c-shape-5 {
-	animation-delay: 400ms;
-	
-}
-#c-shape-6 {
-	animation-delay: 500ms;
-	
-}
-#c-shape-7 {
 	animation-delay: 600ms;
 	
 }
+#c-shape-6 {
+	animation-delay: 750ms;
+	
+}
+#c-shape-7 {
+	animation-delay: 900ms;
+	
+}
 #c-shape-8 {
-	animation-delay: 700ms;
+	animation-delay: 1050ms;
 	
 }
 #c-shape-9 {
-	animation-delay: 800ms;
+	animation-delay: 1200ms;
 	
 }
 

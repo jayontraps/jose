@@ -1,5 +1,5 @@
 <header class="entry-header">							
-	<h1 class="entry-title">Upcoming Workshops</h1>
+	<h2 class="entry-title">Upcoming Workshops</h2>
 </header><!-- .entry-header -->
 <span class="brd-line"></span>
 

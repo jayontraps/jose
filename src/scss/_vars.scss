@@ -1,6 +1,12 @@
 // layout
 $max-width: 100%;
 
+// breakpoints
+$tab_land: 1024px;
+$tab_port: 1000px;
+$mama-bear : 769px;
+$baby-bear : 560px;
+$slide_switch : 480px;
 
 
 // spacing
@@ -14,6 +20,7 @@ $bg : #fbfbfb;
 $body_color	:#333333;
 $off_white: #fbfbfb;
 $light_grey: #b4b4b4;
+$grey: #666;
 
 
 
@@ -21,6 +28,7 @@ $light_grey: #b4b4b4;
 // fonts
 $body_font : TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
 $body_font_size : 17px;
+$smaller-font-size: 15px;
 $body_line_height : 1.5em;
 $heading_font : 'Roboto', 'News Cycle', sans-serif; // 'texgyreherosregular', sans-serif;
 $letter-spacing: .2em;
@@ -47,23 +55,6 @@ $milli-size:        12px;
 $micro-size:        10px;
 
 
-
-
-// .test {
-// font-family:'Virtuosa Classic LT W01';
-// font-family:'Garamond Prmr W01 Md';
-// font-family:'Garamond Prmr W01 Dspl';
-// font-family:'Lucida Sans W01 Roman';
-// font-family:'Gill Sans W04 Condensed';
-// font-family:'Neue Helvetica W04 39 C1289726';
-// font-family:'HelveticaNeueW02-ThinCn 674417';
-// font-family:'HelveticaNeueW02-Thin';
-// font-family:'Minion W01 Cap Regular';
-
-
-// font-family: 'PT Sans', sans-serif;
-
-// }
 
 
 

@@ -31,21 +31,23 @@
 ----------------------------------------------- */
 
 .main-navigation {
-    // clear: both;
     display: block;
     float: right;
-    // width: 100%;
 }
+
 .main-navigation ul {
     list-style: none;
-    margin: 20px 0 0 0;
+    margin: 21px 0 0 0;
     padding:0;
     font-family: $heading_font;
     font-weight: $heading_weight;
+    font-size: $smaller-font-size;
+    
     > li {
 
             &:last-of-type {
                 margin-right: 0;
+                padding-right: 0;
                 .slant {
                     opacity: 0;
                 }
@@ -60,7 +62,6 @@
 
             &:hover {
                 text-decoration:underline;
-                // color: $link_hover_color;
             }
 
             &:visited {
@@ -78,6 +79,8 @@
 
             svg {
                 fill: $off_white;
+                display: block;
+                padding-bottom: 6px;
             }
         }
     }  
@@ -86,16 +89,24 @@
         padding-bottom: 1em;
         background-color: rgba(255,255,255,0.5);
     }  
-
 }
 
+
+@media only screen and (max-width : 1120px) {
+    .main-navigation ul > li > a {
+        padding: 0;
+    }
+}
+
+
 .main-navigation {
-        &.toggled {
-            .slant {
-                display: none;
-            }
+    &.toggled {
+        .slant {
+            display: none;
         }
-    } 
+    }
+} 
+
 .main-navigation li {
     float: left;
     position: relative;
@@ -105,40 +116,12 @@
         padding-right: 0;
     }
 }
-// .main-navigation a {
-//     display: block;
-//     text-decoration: none;
-// }
-// .main-navigation ul ul {
-//     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-//     display: none;
-//     float: left;
-//     left: 0;
-//     position: absolute;
-//     top: 1.5em;
-//     z-index: 99999;
-// }
-// .main-navigation ul ul ul {
-//     left: 100%;
-//     top: 0;
-// }
-// .main-navigation ul ul a {
-//     width: 200px;
-// }
-.main-navigation ul ul li {
-}
-.main-navigation li:hover > a {
-}
-.main-navigation ul ul :hover > a {
-}
-.main-navigation ul ul a:hover {
-}
+
+
 .main-navigation ul li:hover > ul {
     display: block;
 }
-.main-navigation .current_page_item a,
-.main-navigation .current-menu-item a {
-}
+
 
 /* Small menu */
 .menu-toggle {
@@ -187,101 +170,6 @@
 }
 
 
-
-
-/* --------- Jason styles -----------*/
-
-// .main-navigation {
-
-//         position: absolute;
-//         bottom:0;
-//         right: 0;    
-
-//     ul {
-        
-//         clear: both;
-//         margin: 0;
-//         font-family: $heading_font;
-//         padding:0;
-
-//         > li {
-
-//                 &:last-of-type {
-//                     margin-right: 0;
-//                 }
-//             > a {
-//                 padding:1em 2.3em;
-//                 color: $off_white;
-//                 text-transform: uppercase;
-//                 font-size: .9em;
-//             }
-
-//             .slant {
-//                 display: inline-block;
-//                 width: 2px;
-//                 height: 38px;
-//                 border-right: 1px solid $off_white;
-//                 @include transform(rotate(-135deg) );
-//                 margin-bottom: -.65em;
-//             }
-//         }    
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Sticky Nav */
-// #site-navigation.fixed {
-    
-//         position:fixed;
-//         left:0;
-//         top:0;
-//         background-color: $wide_bg;
-//         z-index: 99999;
-//         border-bottom: 1px solid $off_white;
-
-//      .menu-toggle {
-//         height: 40px;
-//      }
-
-
-//      ul {
-//          // display: block;
-//          margin: 0 auto;
-//          width:100%;
-//          max-width: $max-width;
-         
-
-//          @include breakpoint(init) {
-
-//             width: 94%;
-//             margin: 0 auto;
-
-//          }
-//      }     
-
-//      .menu-toggle {
-//         padding-left: 3%;
-//      }
-//  }
- 
-
- 
-
-
-//  #content.fixed-state {
-//     margin-top:40px;
-//  }
 .blob {
     fill: $body_color;
 }
@@ -322,71 +210,29 @@
 
     &.nav-previous {
         left:0;
-        // a {
-        //     background: url('../img/arrow_left.png') top left no-repeat;
-        // }
     }
 
     &.nav-next {
         right:0;
-        // a {
-        //      background: url('../img/arrow_right.png') top left no-repeat;
-        // }
     }    
 }
 
 
-// .nav-next {
-//     position: fixed;
-//     top:50%;
-//     right:0;
-//     a {
-//         text-decoration: none;
-//         display:block;
-//         width:36px;
-//         height:67px;
-//         background: url('../img/arrow_right.png') top left no-repeat;
-//     }
+/* inbetween ----------- */
+@media only screen and (min-width : $mama-bear) and (max-width : 960px) {
 
-// }
+    .main-navigation {
+        clear: both;
+        float: left;
+    }    
 
+    .site-header {
+        height: 120px;
+    }
+}
 
 
 
 
-// .site-main .comment-navigation,
-// .site-main .paging-navigation,
-// .site-main .post-navigation {
-//     margin: 0 0 1.5em;
-//     overflow: hidden;
-// }
-// .comment-navigation .nav-previous,
-// .paging-navigation .nav-previous,
-// .post-navigation .nav-previous {
-//     float: left;
-//     width: 50%;
-// }
-// .comment-navigation .nav-next,
-// .paging-navigation .nav-next,
-// .post-navigation .nav-next {
-//     float: right;
-//     text-align: right;
-//     width: 50%;
-// }
 
-// /* from underscores style.css = Navigation
-// ----------------------------------------------- */
 
-// .site-main [class*="navigation"] {
-//     margin: 0 0 1.5em;
-//     overflow: hidden;
-// }
-// [class*="navigation"] .nav-previous {
-//     float: left;
-//     width: 50%;
-// }
-// [class*="navigation"] .nav-next {
-//     float: right;
-//     text-align: right;
-//     width: 50%;
-// }

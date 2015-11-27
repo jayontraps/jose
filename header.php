@@ -38,27 +38,30 @@ document.createElement( "picture" );
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="site_logo">
-			
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
-				<h1 class="site-title">Jose Agudo</h1>			
-			</a>
-	
-		</div>
-		
-		
-		 <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-		<rect x="6" y="9" width="28" height="2"/>
-		<rect x="6" y="18" width="28" height="2"/>
-		<rect x="6" y="27" width="28" height="2"/>
-		</svg>
+		<div class="inner-header">
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="site_logo">
+				
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
+					<h1 class="site-title">Jose Agudo</h1>			
+				</a>
+		
+			</div>
 			
-			<?php jose_primary_nav(); ?>
-		</nav>
+			
+			 <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+			<rect x="6" y="9" width="28" height="2"/>
+			<rect x="6" y="18" width="28" height="2"/>
+			<rect x="6" y="27" width="28" height="2"/>
+			</svg>
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">				
+				<?php jose_primary_nav(); ?>
+			</nav>
+
+		</div>
 
 	</header><!-- #masthead -->
 

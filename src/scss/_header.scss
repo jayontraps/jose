@@ -11,6 +11,10 @@
 	}
 }
 
+.inner-header {
+	width: 95%;
+	margin: 0 auto;
+}
 
 .site-branding {
 	width: 170px;
@@ -45,19 +49,29 @@
 
 	width: 300px;
 	height: 30px;
-	margin: 20px 0 0 40px;
+	margin: 20px 0 0 0;
 	float: left;
 
 	a {
 		display: block;
 		width: 300px;
 		height: 30px;
+
+		@include breakpoint(slide_switch) {
+			width: 220px;
+		}		
 	}
 
 	.logo {
 		width: 100%;
 	}
+
+	@include breakpoint(slide_switch) {
+		width: 220px;
+	}	
 }
+
+
 
 
 
