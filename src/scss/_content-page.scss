@@ -32,18 +32,18 @@
 .lg-screen {
 	#secondary-post {
 		left:-100%;
-		opacity: 0;		
+		opacity: 0;
 	}
 }
 .sm-screen {
 	#secondary-post {
 		left:0;
 		opacity: 1;
-		margin-top: 0;	
+		margin-top: 0;
 
 		h1 {
 			margin-top: 0;
-		}			
+		}
 	}
 }
 
@@ -64,8 +64,8 @@
 		h1, .brd-line {
 			color: $off_white;
 		}
-	}	
-	
+	}
+
 	// news page specific
 	.post-21 {
 		.hero {
@@ -73,7 +73,7 @@
 			@include breakpoint(mama-bear) {
 				top: 0;
 			}
-		}	
+		}
 	}
 }
 
@@ -92,11 +92,12 @@
 
 .more-link {
 	position: relative;
+	text-align: right;
 
 	&:hover {
 		cursor: pointer;
 		text-decoration: underline;
-	}	
+	}
 }
 
 .sm-screen {

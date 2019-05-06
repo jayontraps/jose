@@ -23,7 +23,7 @@ if ( ! function_exists( 'jose_setup' ) ) :
 function jose_setup() {
 
 
-	// override default jQuery version (1.8.2) 
+	// override default jQuery version (1.8.2)
 	if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 	function my_jquery_enqueue() {
 	   wp_deregister_script('jquery');
@@ -64,8 +64,8 @@ function jose_setup() {
 	  'not_found_in_trash' => 'No Portfolio Found in Trash',
 	  'parent' => 'Parent Portfolio Item',
 	)
-	) ); }	 
-	
+	) ); }
+
 
 	/*
 	 * Make theme available for translation.
@@ -90,7 +90,7 @@ function jose_setup() {
 		'primary' => __( 'Primary Menu', 'jose' ),
 		'footer' => __( 'Footer Menu', 'jose' ),
 	) );
-	
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -142,20 +142,20 @@ function jose_scripts() {
 	// wp_enqueue_style('jose-fontsdotcom', 'http://fast.fonts.net/cssapi/6d7687f4-16fc-4c67-aea7-bab36c3d5397.css');
 
 	// wp_enqueue_style( 'jose-google-fonts', 'http://fonts.googleapis.com/css?family=News+Cycle');
-	wp_enqueue_style( 'jose-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,300,100');	
+	wp_enqueue_style( 'jose-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,300,100');
 
-	
+
 
 	wp_enqueue_style( 'jose-style-definition', get_stylesheet_uri(), array());
 
-	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/build/css/main.css', array(), '20151126' );
+	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/build/css/main.css', array(), '20190506' );
 
 	wp_enqueue_script( 'jose-modenizr', get_template_directory_uri() . '/plugins/modernizr-2.8.0.min.js', array(), false);
 
 	// loading in the header
 	// wp_enqueue_script( 'jose-Picturefill', get_template_directory_uri() . '/plugins/picturefill.min.js', array(), false);
 
-	wp_enqueue_script( 'jose-build', get_template_directory_uri() . '/build/js/all.min.js', array('jquery'), '20151126', true );		
+	wp_enqueue_script( 'jose-build', get_template_directory_uri() . '/build/js/all.min.js', array('jquery'), '20151126', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -195,7 +195,7 @@ require get_template_directory() . '/inc/jetpack.php';
 function my_custom_adjacent_post_where($sql) {
 	if ( !is_main_query() || !is_singular() )
 		return $sql;
-	
+
 	$the_post = get_post( get_the_ID() );
 	$patterns = array();
 	$patterns[] = '/post_date/';
@@ -211,15 +211,10 @@ add_filter( 'get_previous_post_where', 'my_custom_adjacent_post_where' );
 function my_custom_adjacent_post_sort($sql) {
 	if ( !is_main_query() || !is_singular() )
 		return $sql;
-	
+
 	$pattern = '/post_date/';
 	$replacement = 'menu_order';
 	return preg_replace( $pattern, $replacement, $sql );
 }
 add_filter( 'get_next_post_sort', 'my_custom_adjacent_post_sort' );
 add_filter( 'get_previous_post_sort', 'my_custom_adjacent_post_sort' );
-
-
-
-
-

@@ -6,3 +6,4 @@ images/
 node_modules/
 build/
 fonts/
+.DS_Store

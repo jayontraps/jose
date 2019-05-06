@@ -16,12 +16,12 @@
 		li {
 				list-style: none;
 				text-align: left;
-				margin-bottom:.2em;			
+				margin-bottom:.2em;
 			a {
 				font-family: $heading_font;
 				font-weight: normal;
 				text-transform:uppercase;
-				font-size: 1em;	
+				font-size: 1em;
 				color:$off_white;
 				text-decoration: none;
 				line-height:1em;
@@ -33,25 +33,25 @@
 			}
 
 		}
-		
+
 	}
 
 	@include breakpoint(tab_land) {
-		width:70%;	
+		width:70%;
 
 		ul {
 			column-count: 2;
 			column-gap: 10px;
-		}	
-	}	
+		}
+	}
 
 	@include breakpoint(mama-bear) {
-		width:100%;	
+		width:100%;
 
 		ul {
 			column-count: 1;
 			column-gap: 0px;
-		}	
+		}
 	}
 }
 
@@ -64,7 +64,7 @@
 		h1 {
 			margin-top: 0;
 		}
-	}	
+	}
 }
 
 // timedropper specific
@@ -84,7 +84,7 @@
 	padding: 0;
 	@extend .group;
 	column-count: 2;
-	column-gap: 20px;	
+	column-gap: 20px;
 
 	p {
 		margin-top:0;
@@ -92,14 +92,14 @@
 
 	@include breakpoint(baby-bear) {
 		column-count: 1;
-		column-gap: 0px;		
+		column-gap: 0px;
 	}
 }
 
 .videoHolder {
 	width: 100%;
 	max-width: 630px;
-	margin-top: 1em;	
+	margin-top: 1em;
 	padding: 6px;
 }
 
@@ -130,25 +130,27 @@
 	}
 }
 
+.item-details {
 
-.credentials {
-	margin: 0 0 1.5em 0;
-	padding: 0;
-	li {
-		list-style: none;
+	.credentials {
+		margin: 0 0 1.5em 0;
+		padding: 0;
+		li {
+			list-style: none;
+			padding-bottom: 0;
+		}
+	}
+
+	ul {
+		margin: 0;
+		padding: 0 0 0 1rem;
+		li {
+			padding-bottom: .5rem;
+		}
+		ul {
+			li {
+				padding-bottom: 0;
+			}
+		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

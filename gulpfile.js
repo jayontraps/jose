@@ -22,11 +22,11 @@ var sass = require('gulp-sass'),
 
 function errorAlert(error){
     notify.onError({
-        title: "Error", 
-        message: "Check your terminal", 
-        sound: "Sosumi"})(error); 
+        title: "Error",
+        message: "Check your terminal",
+        sound: "Sosumi"})(error);
     console.log(error.toString());
-    this.emit("end"); 
+    this.emit("end");
 };
 
 
@@ -37,16 +37,16 @@ var dest = 'build/';
 
 
 gulp.task('sass', function() {
-    return gulp.src(src + "scss/main.scss")        
+    return gulp.src(src + "scss/main.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({outputStyle: 'nested'}))
-        .on('error', errorAlert)  
+        .on('error', errorAlert)
         .pipe(postcss([
               lost(),
               autoprefixer({
                 browsers: ['last 2 versions']
             })
-        ]))         
+        ]))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(dest + "css"))
         .pipe(browserSync.stream());
@@ -57,8 +57,8 @@ gulp.task('minify-css', function() {
     if (!devBuild) {
         return gulp.src( dest + 'css/*.css' )
             .pipe(minifyCss({compatibility: 'ie8'}))
-            .pipe(gulp.dest(dest + 'css'));  
-    }  
+            .pipe(gulp.dest(dest + 'css'));
+    }
 });
 
 
@@ -89,9 +89,9 @@ gulp.task('lintjs', function() {
 
 gulp.task('browserify', function () {
     return browserify(src + 'js/app/entry', { debug: true})
-        .bundle()   
-        .on('error', errorAlert)     
-        .pipe(source('bundle.js'))        
+        .bundle()
+        .on('error', errorAlert)
+        .pipe(source('bundle.js'))
         .pipe(gulp.dest(dest + 'js'));
 });
 
@@ -103,13 +103,13 @@ gulp.task('browser-sync', function() {
         //     baseDir: "./"
         // }
 
-        proxy: "localhost/jose_wp"        
+        proxy: "localhost:8888"
 
     });
 });
 
 gulp.task('reload-js', ['lintjs', 'combine' ], function() {
-    browserSync.reload();   
+    browserSync.reload();
 });
 
 gulp.task('reload-css', ['sass'], function() {
@@ -124,4 +124,3 @@ gulp.task('watch', ['sass', 'lintjs', 'combine', 'browser-sync'], function() {
 
 
 gulp.task('default', ['watch']);
-

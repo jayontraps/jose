@@ -1,4 +1,4 @@
-<header class="entry-header">							
+<header class="entry-header workshops_title">							
 	<h2 class="entry-title">Upcoming Workshops</h2>
 </header><!-- .entry-header -->
 <span class="brd-line"></span>
@@ -7,34 +7,34 @@
 
 <?php
 
-	$temp = $wp_query; 
-	$wp_query = null; 
-	$wp_query = new WP_Query(); 
+	$temp = $wp_query;
+	$wp_query = null;
+	$wp_query = new WP_Query();
 
 	$today = date('Ymd');
 
-	$args = array (			
+	$args = array (
 		'post_type' => 'workshops',
 		'posts_per_page' => 10,
 		'paged' => $paged,
-		'cat' => -4,	
+		'cat' => -4,
 		'meta_key' => 'start_date', // name of custom field
 		'orderby' => 'meta_value_num',
-		'order' => 'ASC'		    
+		'order' => 'ASC'
 	);
 
-  $wp_query->query($args); 
+  $wp_query->query($args);
 
-  // $wp_query->query('showposts=6&post_type=news'.'&paged='.$paged); 
+  // $wp_query->query('showposts=6&post_type=news'.'&paged='.$paged);
 
-  while ($wp_query->have_posts()) : $wp_query->the_post(); 
+  while ($wp_query->have_posts()) : $wp_query->the_post();
 
 ?>
 
 
 <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php 
+		<?php
 			$start_date = get_field('start_date');
 			// $start_date = 19881123 (23/11/1988)
 			// extract Y,M,D
@@ -72,15 +72,15 @@
 			} else {
 				echo '<span class="date meta_grid">' . $start_full . '</span>';
 			}
-		?>		
+		?>
 
-		<?php if (get_field('location')) : ?> 	
+		<?php if (get_field('location')) : ?>
 			<span class="location meta_grid"> - <?php the_field('location'); ?></span>
 		<?php endif; ?>
 
-		<?php if (get_field('description')) : ?> 	
+		<?php if (get_field('description')) : ?>
 			<div class="description"><?php the_field('description'); ?></div>
-		<?php endif; ?>	
+		<?php endif; ?>
 
 </li>
 
@@ -100,8 +100,8 @@
 <?php } ?>
 
 
-<?php 
-  $wp_query = null; 
+<?php
+  $wp_query = null;
   $wp_query = $temp;  // Reset
   wp_reset_postdata();
-?>		
+?>

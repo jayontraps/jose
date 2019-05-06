@@ -1,0 +1,61 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn remove node-sass gulp-sass
+
+PATH: 
+  /Users/jasonrighelato/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  10.6.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "gulp-from-scratch",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "gulp": "^3.9.0",
+      "gulp-util": "^3.0.7",
+      "vinyl-source-stream": "^1.1.0"
+    },
+    "devDependencies": {
+      "autoprefixer": "^6.1.0",
+      "browser-sync": "^2.10.0",
+      "browserify": "^12.0.1",
+      "gulp-concat": "^2.6.0",
+      "gulp-deporder": "^1.1.0",
+      "gulp-if": "^2.0.0",
+      "gulp-jshint": "^1.12.0",
+      "gulp-minify-css": "^1.2.1",
+      "gulp-notify": "^2.2.0",
+      "gulp-postcss": "^6.0.1",
+      "gulp-sass": "^2.1.0",
+      "gulp-scss-lint": "^0.3.8",
+      "gulp-sourcemaps": "^1.6.0",
+      "gulp-uglify": "^1.5.1",
+      "jshint-stylish": "^2.1.0",
+      "lost": "^6.6.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: No lockfile in this directory. Run `yarn install` to generate one.
+      at new MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:89389:13
