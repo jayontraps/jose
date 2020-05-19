@@ -3,12 +3,8 @@
 // Load plugins
 const autoprefixer = require("autoprefixer");
 const browsersync = require("browser-sync").create();
-const cp = require("child_process");
 const del = require("del");
-const eslint = require("gulp-eslint");
 const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
-const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
@@ -89,7 +85,7 @@ function scripts() {
     gulp
     .src(src + 'js/*.js')
     .pipe(deporder())
-    .pipe(concat('test.js'))
+    .pipe(concat('all.min.js'))
     .pipe(gulpif(!devBuild, uglify()))
     .pipe(gulp.dest(dest + 'js/'))
   )

@@ -1,7 +1,5 @@
 module.exports = function videoRemoved() {
+  $('header').removeClass('playVideo')
 
-	$('header').removeClass('playVideo');
-	
-	$('.hero').fadeIn('slow');			
-
-};
+  $('.hero').fadeIn('slow')
+}
