@@ -84,14 +84,16 @@ function css() {
 //   );
 // }
 
-gulp.task('scripts', function() {
-    return gulp
-      .src(src + 'js/*.js')
-      .pipe(deporder())
-      .pipe(concat('test.js'))
-      .pipe(gulpif(!devBuild, uglify()))
-      .pipe(gulp.dest(dest + 'js/'));
-});
+function scripts() {
+  return (
+    gulp
+    .src(src + 'js/*.js')
+    .pipe(deporder())
+    .pipe(concat('test.js'))
+    .pipe(gulpif(!devBuild, uglify()))
+    .pipe(gulp.dest(dest + 'js/'))
+  )
+}
 
 // Watch files
 function watchFiles() {

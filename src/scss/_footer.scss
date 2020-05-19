@@ -1,41 +1,42 @@
 #colophon {
-	width:100%;
-	// display: none;
+  width: 100%;
+  // display: none;
 }
 
 .site-footer {
-	width: 90%;
-	margin: 0 auto;
-	z-index: 10;
-	height:60px;
-	background-color: rgba(0,0,0, 0.5);	
-	// height: 100px;
+  width: 90%;
+  margin: 0 auto;
+  z-index: 10;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  // height: 100px;
 
-	ul {
-		padding:2em 5%;
+  ul {
+    padding: 2em 5%;
 
-		li {
-			padding: 0 1em;
-			line-height: 1em;
-			border-right: 1px solid $off_white;
-			color: $off_white;
-			&:first-of-type {
-				padding-left: 0;
-			}			&:last-of-type {
-				border-right: none; 
-			}
+    li {
+      padding: 0 1em;
+      line-height: 1em;
+      border-right: 1px solid $off_white;
+      color: $off_white;
+      &:first-of-type {
+        padding-left: 0;
+      }
+      &:last-of-type {
+        border-right: none;
+      }
 
-			a {
-				color: $off_white;
-			}
-		}
-	}
+      a {
+        color: $off_white;
+      }
+    }
+  }
 }
 
 .credits {
-	float:right;
-	padding: 1em;
-	font-style: italic;
-	font-size: .9em;
-	color: $light_grey;
+  float: right;
+  padding: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+  color: $light_grey;
 }

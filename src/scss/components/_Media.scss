@@ -1,55 +1,50 @@
 .Media {
-	lost-utility: clearfix;
-	width: 100%;
-	padding-bottom: 0;	
-	margin-bottom: 3em;	
+  lost-utility: clearfix;
+  width: 100%;
+  padding-bottom: 0;
+  margin-bottom: 3em;
 }
 
 .media-col {
-	width: 100%;
-	.brd-line {
-		display: none;
-	}	
+  width: 100%;
+  .brd-line {
+    display: none;
+  }
 }
 
-
 .Media_meta {
-	margin-bottom: 1.5em;
-	font-style: italic;
-	color: lighten($body_color, 50%);	
+  margin-bottom: 1.5em;
+  font-style: italic;
+  color: lighten($body_color, 50%);
 }
 
 .Media_title {
-	margin: 0 0 0 0;
-	padding-top: 1em;	
+  margin: 0 0 0 0;
+  padding-top: 1em;
 }
 
 .Media_co {
-	margin-bottom: .2em;
-	margin-top: .5em;
-	// font-family: $body_font;
-	// font-style: italic;
-	// color: lighten($body_color, 50%);
+  margin-bottom: 0.2em;
+  margin-top: 0.5em;
+  // font-family: $body_font;
+  // font-style: italic;
+  // color: lighten($body_color, 50%);
 }
 
-@media only screen and (min-width : $mama-bear) {
+@media only screen and (min-width: $mama-bear) {
+  .Media {
+    padding-bottom: 3em;
+  }
 
-	.Media {
-		padding-bottom: 3em;
-	}
+  .media-col {
+    lost-column: 1/2;
 
-	.media-col {
+    .brd-line {
+      display: block;
+    }
+  }
 
-		lost-column: 1/2;
-
-		.brd-line {
-			display: block;
-		}			
-	}
-
-
-	.Media_title {
-		padding-top: 2em;
-	}
-
+  .Media_title {
+    padding-top: 2em;
+  }
 }

@@ -1,60 +1,59 @@
 // over-rides for workshops page
 #post-23 {
+  .entry-content {
+    margin: 0;
+  }
 
-	.entry-content {
-		margin: 0;
-	}
+  &.col-1-2 {
+    // width: 33.33%;
+    @include breakpoint(mama-bear) {
+      float: none;
+      width: 100%;
+    }
+  }
 
-	&.col-1-2 {
-		// width: 33.33%;
-	    @include breakpoint( mama-bear) {
-	        float:none;
-	        width:100%;
-	    }  		
-	}
-
-	&.item-content {
-		@extend .tint;
-	}
+  &.item-content {
+    @extend .tint;
+  }
 }
 
 // over-rides for Calendar page
 
 #post-143 {
-	&.item-content {
-		@extend .tint;
-	}	
+  &.item-content {
+    @extend .tint;
+  }
 }
 
-// timedropper specific 
+// timedropper specific
 .post-35 {
-	.hero {
-		top: 62px;
-	}
+  .hero {
+    top: 62px;
+  }
 }
 
 // contact page
 .contact {
-	.hero {
-		top: 62px;
-		@include breakpoint(mama-bear) {
-			top:0;
-		}		
-	}
+  .hero {
+    top: 62px;
+    @include breakpoint(mama-bear) {
+      top: 0;
+    }
+  }
 }
 
 // work page specific
 .post-15 {
-	.hero {
-		top: 100px;
-		@include breakpoint(mama-bear) {
-			top:0;
-		}
-	}
+  .hero {
+    top: 100px;
+    @include breakpoint(mama-bear) {
+      top: 0;
+    }
+  }
 }
 
 .media {
-	.entry-title {
-		margin-top: 1.5em;
-	}
+  .entry-title {
+    margin-top: 1.5em;
+  }
 }

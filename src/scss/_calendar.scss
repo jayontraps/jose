@@ -3,62 +3,58 @@
 // }
 
 .workshops_title {
-	margin-top: 2rem;
+  margin-top: 2rem;
 }
-
 
 .calendar_list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
-	li {
-		width: 100%;
-		// margin: 0 0 1em;
+  li {
+    width: 100%;
+    // margin: 0 0 1em;
 
-		.meta_grid {
-			display: inline-block;
+    .meta_grid {
+      display: inline-block;
 
-			&.location {
-				padding-right: 1em;
-			}
-			font-style: italic;
-			color: lighten($body_color, 50%);
-		}
+      &.location {
+        padding-right: 1em;
+      }
+      font-style: italic;
+      color: lighten($body_color, 50%);
+    }
 
-		.description {
-			line-height: 1em;
+    .description {
+      line-height: 1em;
 
-			p {
-				margin: 0;
-			}
-		}
-	}
+      p {
+        margin: 0;
+      }
+    }
+  }
 }
-
 
 .ws_list {
-	margin: 2em 0;
+  margin: 2em 0;
 }
 
-
-
-
 .pagination {
-	text-align: center;
-	li {
-		display: inline-block;
-		a, a:visited {
-			// font-family: $heading_font;
-			display: block;
-			padding: .5em;
-			color: lighten($body_color, 50%);
-		}
+  text-align: center;
+  li {
+    display: inline-block;
+    a,
+    a:visited {
+      // font-family: $heading_font;
+      display: block;
+      padding: 0.5em;
+      color: lighten($body_color, 50%);
+    }
 
-		&.current {
-			a {
-				color: $off_white;
-			}
-		}
-	}
+    &.current {
+      a {
+        color: $off_white;
+      }
+    }
+  }
 }

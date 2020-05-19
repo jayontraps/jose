@@ -2,188 +2,164 @@
   box-sizing: border-box;
 }
 
-
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
 }
 
 body {
-	background-color: $bg;
+  background-color: $bg;
 }
-
 
 /* =Global
 ----------------------------------------------- */
 
 .brd-line {
-	clear: both;
-	width:100px;
-	height: 2px;
-	display: block;
-	padding: 0;
-	margin: 0;
-	border-bottom: 2px solid;
+  clear: both;
+  width: 100px;
+  height: 2px;
+  display: block;
+  padding: 0;
+  margin: 0;
+  border-bottom: 2px solid;
 }
 
 .dark {
-	.brd-line {
-		border-color: $off_white;
-	}
+  .brd-line {
+    border-color: $off_white;
+  }
 }
 
 .light {
-	.brd-line {
-		border-color: $body_color;
-	}
+  .brd-line {
+    border-color: $body_color;
+  }
 }
-
 
 .tint {
-	background-color: rgba(0,0,0,0.7);
-	color: $off_white;
-	padding:1em;
-	margin-top:1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: $off_white;
+  padding: 1em;
+  margin-top: 1em;
 
-	h1 {
-		color: $off_white;
-	}
+  h1 {
+    color: $off_white;
+  }
 
-	.brd-line {
-		color: $off_white;
-	}
+  .brd-line {
+    color: $off_white;
+  }
 }
 
-
 .tint_light {
-	// background-color: rgba(255,255,255,0.5);
-	background-color: $off_white;
+  // background-color: rgba(255,255,255,0.5);
+  background-color: $off_white;
 
-	color: $body_color;
-	padding:1em;
-	margin-top:1em;
+  color: $body_color;
+  padding: 1em;
+  margin-top: 1em;
 
-	h1 {
-		color: $body_color;
-	}
+  h1 {
+    color: $body_color;
+  }
 
-	.brd-line {
-		color: $body_color;
-	}
+  .brd-line {
+    color: $body_color;
+  }
 }
 
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em;
 }
 
 figure {
-	margin: 0;
+  margin: 0;
 }
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+  margin: 0 0 1.5em;
+  width: 100%;
 }
 th {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 p {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
-ul, ol {
-	margin: 0 0 1.5em 3em;
+ul,
+ol {
+  margin: 0 0 1.5em 3em;
 }
 ul {
-	list-style: disc;
+  list-style: disc;
 }
 ol {
-	list-style: decimal;
+  list-style: decimal;
 }
 li > ul,
 li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
+  margin-bottom: 0;
+  margin-left: 1.5em;
 }
 dt {
-	font-weight: bold;
+  font-weight: bold;
 }
 dd {
-	margin: 0 1.5em 1.5em;
+  margin: 0 1.5em 1.5em;
 }
 
-b, strong {
-	font-weight: bold;
+b,
+strong {
+  font-weight: bold;
 }
-
-
-
 
 .fb {
-	&:hover {
-
-		path {
-			fill:$light_grey;
-		}
-
-		
-	}
+  &:hover {
+    path {
+      fill: $light_grey;
+    }
+  }
 }
-
 
 #mc_embed_signup {
-
-	label,
-	input[type="email"],
-	input[type="submit"]	{
-		display: block;
-		width: 300px;
-		margin-bottom: 1em;
-	}
+  label,
+  input[type='email'],
+  input[type='submit'] {
+    display: block;
+    width: 300px;
+    margin-bottom: 1em;
+  }
 }
-
-
-
-
 
 /* Text meant only for screen readers */
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
 }
 
 .screen-reader-text:hover,
 .screen-reader-text:active,
 .screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar */
 }
-
-
-
-
-
-
-
-
-
-

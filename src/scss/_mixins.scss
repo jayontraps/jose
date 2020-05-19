@@ -1,33 +1,33 @@
 @mixin breakpoint($point) {
   @if $point == desktop {
-    @media (min-width: $max-width)  { @content; }
+    @media (min-width: $max-width) {
+      @content;
+    }
+  } @else if $point == init {
+    @media (max-width: $max-width) {
+      @content;
+    }
+  } @else if $point == tab_land {
+    @media (max-width: $tab_land) {
+      @content;
+    }
+  } @else if $point == tab_port {
+    @media (max-width: $tab_port) {
+      @content;
+    }
+  } @else if $point == mama-bear {
+    @media (max-width: $mama-bear) {
+      @content;
+    }
+  } @else if $point == baby-bear {
+    @media (max-width: $baby-bear) {
+      @content;
+    }
+  } @else if $point == slide_switch {
+    @media (max-width: $slide_switch) {
+      @content;
+    }
   }
-
-  @else if $point == init {
-    @media (max-width: $max-width) { @content; }
-  }
-
-   @else if $point == tab_land  {
-    @media (max-width : $tab_land) { @content; }
-  }
-
-  @else if $point == tab_port  {
-    @media (max-width : $tab_port) { @content; }
-  }
-
-  @else if $point == mama-bear {
-    @media (max-width: $mama-bear )  { @content; }
-  }
-
-  @else if $point == baby-bear {
-    @media (max-width: $baby-bear)  { @content; }
-  }
-
-
-  @else if $point == slide_switch {
-    @media (max-width: $slide_switch)  { @content; }
-  }
-
 }
 
 //http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
