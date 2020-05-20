@@ -7,6 +7,7 @@
 
 get_header(); ?>
 
+<div id="content" id="post-<?php the_ID(); ?>" class="content post-<?php the_ID(); ?>">
 
 	<main id="main" class="site-main content_wrap" role="main">
 

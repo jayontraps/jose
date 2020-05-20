@@ -44,6 +44,11 @@ document.createElement( "picture" );
 <body <?php body_class($class); ?>>
 
 <div id="page" class="hfeed site wrapper">
+	<?php 
+		if (is_page_template( 'page-home.php' )) {
+			include "inc/logo-layer.php";
+		};
+	?>
 
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'jose' ); ?></a>
 
@@ -51,13 +56,11 @@ document.createElement( "picture" );
 
 		<div class="inner-header">
 
-			<div class="site_logo">
-				
+			<div class="site_logo">				
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
 					<h1 class="site-title">Jose Agudo</h1>			
 				</a>
-		
 			</div>
 			
 			
@@ -75,9 +78,7 @@ document.createElement( "picture" );
 		</div>
 
 	</header><!-- #masthead -->
-
-
-	<div id="content" class="content post-<?php the_ID(); ?>">
+	
 
 
 

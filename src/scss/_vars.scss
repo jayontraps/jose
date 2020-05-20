@@ -1,5 +1,6 @@
 // layout
 $max-width: 100%;
+$inner-width: 94%;
 
 // breakpoints
 $tab_land: 1024px;
@@ -18,13 +19,16 @@ $body_color: #333333;
 $off_white: #fbfbfb;
 $light_grey: #b4b4b4;
 $grey: #666;
+$tint_dark: rgba(0, 0, 0, 0.7);
+$tint_light: rgba(255, 255, 255, 0.7);
 
 // fonts
-$body_font: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
-$body_font_size: 17px;
-$smaller-font-size: 15px;
+$body_font: 'Open Sans', sans-serif;
+$body_font_size: 15px;
+$smaller-font-size: 13px;
 $body_line_height: 1.5em;
-$heading_font: 'Roboto', 'News Cycle', sans-serif; // 'texgyreherosregular', sans-serif;
+$heading_font: 'Josefin Sans', 'Open Sans Condensed', sans-serif;
+
 $letter-spacing: 0.2em;
 $heading_weight: 300;
 

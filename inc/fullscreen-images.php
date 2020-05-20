@@ -9,8 +9,14 @@ if( !empty($fullscreen_image) ): ?>
             <!--[if IE 9]><video style="display: none;"><![endif]-->
             <source srcset="<?php echo $fullscreen_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>" media="(min-width: 770px)">
             <!--[if IE 9]></video><![endif]-->
-            <img srcset="<?php echo $mobile_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>">
+            <img id="fullscreen-image" srcset="<?php echo $mobile_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>">
         </picture>  
+        
+        <?php if(get_field('image_credits')): ?>
+        <div class="credits">
+            <span>Image credit: </span><?php echo get_field('image_credits') ?>
+        </div>
+        <?php endif; ?>        
     </div>
 
 <?php endif; ?>

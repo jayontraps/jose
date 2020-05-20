@@ -54,10 +54,10 @@ function css() {
     // .pipe(gulp.dest(dest + "css"))
     // .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([
-      lost(),
+      // lost(),
       autoprefixer()]))
     .pipe(sourcemaps.write())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    // .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(dest + "css"))
     .pipe(browsersync.stream());
 }

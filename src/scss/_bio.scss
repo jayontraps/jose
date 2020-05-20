@@ -1,0 +1,30 @@
+.main {
+  @include breakpoint(medium-up) {
+    display: flex;
+    padding-bottom: 2rem;
+  }
+}
+
+.main_content {
+  max-width: $inner-width;
+  margin: 1rem auto;
+
+  @include breakpoint(medium-up) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: 50%;
+    order: 1;
+  }
+}
+
+.main_image {
+  .credits {
+    max-width: $inner-width;
+    margin: 0 auto;
+    text-align: right;
+  }
+  @include breakpoint(medium-up) {
+    width: 50%;
+    order: 2;
+  }
+}

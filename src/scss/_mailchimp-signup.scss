@@ -1,0 +1,71 @@
+.mc_signup {
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  z-index: 9999;
+  max-width: $inner-width;
+  margin: 0 auto;
+  background-color: black;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.mc_signup-wrapper {
+}
+
+.mc_signup-title {
+}
+
+.mc_signup-input {
+  min-width: 320px;
+  width: 50%;
+  font-family: $heading_font;
+  font-size: inherit;
+  appearance: none;
+  outline: 0;
+  border: 0;
+  display: block;
+  margin-right: 1rem;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid white;
+  &::placeholder {
+    color: white;
+  }
+  &:active,
+  &:focus,
+  &:focus-within {
+    background-color: black;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    border-bottom: 1px solid white;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
+
+.mc_signup-submit {
+  font-size: inherit;
+  appearance: none;
+  outline: 0;
+  border: 0;
+  display: block;
+  background-color: black;
+  width: 1em;
+  height: 1em;
+  svg {
+    width: 1em;
+    height: 1em;
+    fill: white;
+  }
+}
+
+.indicates-required {
+  display: none;
+}

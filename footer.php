@@ -8,25 +8,20 @@
  */
 ?>
 
-	</div><!-- #content -->
+  </div><!-- #content.content -->
 
-
-	<footer id="colophon" class="cf" role="contentinfo">
-
-		<?php // jose_footer_nav(); ?>
-		
-		<div class="site-footer cf">
-			<?php if(get_field('image_credits')): ?>
-				<div class="credits"><span>Image credit: </span><?php echo get_field('image_credits') ?></div>
-			<?php endif; ?>
-		</div>
-		
-
-	</footer>
+  <?php include "inc/mailchimp-signup.php"; ?>
 	
-
+  <footer id="colophon" class="cf" role="contentinfo">			
+    <?php // jose_footer_nav(); ?>
+    <div class="site-footer cf">
+      <div class="footer-details"><?php // echo date('Y'); ?> &copy; Agudo Dance Company 12450230</div>
+      
+    </div>		
+  </footer>
+   	
 	
-	</div><!-- #page -->
+	</div><!-- #page.wrapper -->
 
 <?php wp_footer(); ?>
 

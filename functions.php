@@ -139,13 +139,6 @@ add_action( 'widgets_init', 'jose_widgets_init' );
  */
 function jose_scripts() {
 
-	// wp_enqueue_style('jose-fontsdotcom', 'http://fast.fonts.net/cssapi/6d7687f4-16fc-4c67-aea7-bab36c3d5397.css');
-
-	// wp_enqueue_style( 'jose-google-fonts', 'http://fonts.googleapis.com/css?family=News+Cycle');
-	wp_enqueue_style( 'jose-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,300,100');
-
-
-
 	wp_enqueue_style( 'jose-style-definition', get_stylesheet_uri(), array());
 
 	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/build/css/main.css', array(), '20190506' );

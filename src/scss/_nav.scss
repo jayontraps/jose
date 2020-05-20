@@ -44,7 +44,7 @@
       margin-right: 0;
       padding-right: 0;
       .slant {
-        opacity: 0;
+        display: none;
       }
     }
     > a {
@@ -52,8 +52,6 @@
       color: $off_white;
       text-transform: uppercase;
       text-decoration: none;
-      font-size: 0.9em;
-      line-height: 0.9em;
 
       &:hover {
         text-decoration: underline;

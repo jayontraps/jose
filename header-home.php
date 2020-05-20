@@ -80,36 +80,17 @@ document.createElement( "picture" );
 
 
 
-	<?php 
-	$fullscreen_image = get_field('fullscreen_image');
-	$mobile_image = get_field('mobile_image');
-
-	if( !empty($fullscreen_image) ): ?>
-
-	    <div id="hero" class="hero" >
-	        <picture>
-	            <!--[if IE 9]><video style="display: none;"><![endif]-->
-	            <source srcset="<?php echo $fullscreen_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>" media="(min-width: 770px)">
-	            <!--[if IE 9]></video><![endif]-->
-	            <img srcset="<?php echo $mobile_image['url']; ?>" alt="<?php echo $mobile_image['alt']; ?>">
-	        </picture>  
-	    </div>
-
-	<?php endif; ?>
+	<?php include 'inc/fullscreen-images.php'; ?>
 	
 	
-	<div id="playBtn" style="display: none">
-
-		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 100 100" xml:space="preserve" preserveAspectRatio="xMinYMin meet" class="svg-content">
-			<!-- viewBox="5.0 -10.0 100.0 135.0" -->
+	<!-- <div id="playBtn" style="display: none">
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 40 40" enable-background="new 0 0 100 100" xml:space="preserve" preserveAspectRatio="xMinYMin meet" class="svg-content">			
 			<g id="Play">
 			<circle fill="none" stroke-width="1" stroke-miterlimit="10" cx="19.437" cy="19.725" r="18.291"/>
 			<polygon fill="none" stroke-width="1" stroke-miterlimit="10" points="12.5,7.924 32.067,19.222 12.5,30.519 "/>
 			</g>
-
 		</svg>
-
-	</div>
+	</div> -->
 
 
 

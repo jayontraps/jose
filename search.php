@@ -7,6 +7,8 @@
 
 get_header(); ?>
 
+	<div id="content" class="content post-<?php the_ID(); ?>">
+
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

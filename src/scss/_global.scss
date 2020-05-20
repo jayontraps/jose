@@ -37,7 +37,7 @@ body {
 }
 
 .tint {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: $tint_dark;
   color: $off_white;
   padding: 1em;
   margin-top: 1em;
@@ -52,11 +52,8 @@ body {
 }
 
 .tint_light {
-  // background-color: rgba(255,255,255,0.5);
-  background-color: $off_white;
-
+  background-color: $tint_light;
   color: $body_color;
-  padding: 1em;
   margin-top: 1em;
 
   h1 {
@@ -124,16 +121,6 @@ strong {
     path {
       fill: $light_grey;
     }
-  }
-}
-
-#mc_embed_signup {
-  label,
-  input[type='email'],
-  input[type='submit'] {
-    display: block;
-    width: 300px;
-    margin-bottom: 1em;
   }
 }
 

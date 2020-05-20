@@ -1,50 +1,48 @@
-.Media {
-  lost-utility: clearfix;
-  width: 100%;
-  padding-bottom: 0;
-  margin-bottom: 3em;
+.media_list {
+  max-width: $inner_width;
+  margin: 0 auto;
 }
 
 .media-col {
-  width: 100%;
   .brd-line {
     display: none;
   }
 }
 
 .Media_meta {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.5rem;
   font-style: italic;
   color: lighten($body_color, 50%);
 }
 
 .Media_title {
   margin: 0 0 0 0;
-  padding-top: 1em;
+  padding-top: 0.5rem;
 }
 
 .Media_co {
-  margin-bottom: 0.2em;
-  margin-top: 0.5em;
-  // font-family: $body_font;
-  // font-style: italic;
-  // color: lighten($body_color, 50%);
+  margin-bottom: 0.2rem;
+  margin-top: 0.5rem;
 }
 
-@media only screen and (min-width: $mama-bear) {
+@include breakpoint(large-up) {
   .Media {
-    padding-bottom: 3em;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
   }
 
-  .media-col {
-    lost-column: 1/2;
-
-    .brd-line {
-      display: block;
-    }
+  .Media_video {
+    margin-right: 2rem;
   }
 
   .Media_title {
-    padding-top: 2em;
+    padding-top: 1rem;
+  }
+
+  .media-col {
+    .brd-line {
+      display: block;
+    }
   }
 }

@@ -5,12 +5,9 @@
 
 get_header(); ?>
 	
-<?php include 'inc/fullscreen-images.php'; ?>
+  <main id="main" class="media_list" role="main">
 
-
-<main id="main" class="site-main content_wrap" role="main">
-
-	<?php while ( have_posts() ) : the_post(); ?>
+	  <?php while ( have_posts() ) : the_post(); ?>
 	
 	<article id="post-<?php the_ID(); ?>" <?php post_class('item-content'); ?>>
 		<header class="entry-header">
@@ -36,29 +33,22 @@ get_header(); ?>
 				</div>				
 								
 
-				<div class="media-col">
-				
-					<span class="brd-line"></span>
-					
-					<h3 class="Media_title"><?php echo $media_title; ?></h3>
+        <div class="media-col">				
+          <span class="brd-line"></span>					
+          <h3 class="Media_title"><?php echo $media_title; ?></h3>
+          <?php if( $media_co ): ?>
+          <h4 class="Media_co"><?php echo $media_co; ?></h4>
+          <?php endif; ?>
 
-					<?php if( $media_co ): ?>
-						<h4 class="Media_co"><?php echo $media_co; ?></h4>
-					<?php endif; ?>
+          <?php if( $media_meta ): ?>
+          <div class="Media_meta"><?php echo $media_meta; ?></div>
+          <?php endif; ?>				
 
-					<?php if( $media_meta ): ?>
-						<div class="Media_meta"><?php echo $media_meta; ?></div>
-					<?php endif; ?>				
-					
-					<?php if( $media_description ): ?>
-						<div class="Media_description"><?php echo $media_description; ?></div>
-					<?php endif; ?>
-
-						
-
-				</div>
-		
-		    </div>
+          <?php if( $media_description ): ?>
+          <div class="Media_description"><?php echo $media_description; ?></div>
+          <?php endif; ?>						
+          </div>		
+        </div>
 
 		<?php endwhile; ?>
 

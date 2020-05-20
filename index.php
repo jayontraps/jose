@@ -13,6 +13,8 @@
 
 get_header(); ?>
 
+	<div id="content" class="content post-<?php the_ID(); ?>">
+
 	<main id="main" class="site-main content_wrap" role="main">
 
 	<?php if ( have_posts() ) : ?>

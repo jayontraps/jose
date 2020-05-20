@@ -27,6 +27,18 @@
     @media (max-width: $slide_switch) {
       @content;
     }
+  } @else if $point == large-up {
+    @media (min-width: $tab_port) {
+      @content;
+    }
+  } @else if $point == medium-up {
+    @media (min-width: $mama-bear) {
+      @content;
+    }
+  } @else if $point == small-only {
+    @media (max-width: $mama-bear) {
+      @content;
+    }
   }
 }
 

@@ -1,6 +1,10 @@
 .secondaryWrap {
   position: relative;
   width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+
   // min-height:700px;
   // overflow: hidden;
 
@@ -15,6 +19,8 @@
   // }
 
   &.on {
+    max-height: 3000px;
+    transition: max-height 0.45s ease-in;
     #secondary-post {
       position: relative;
     }
@@ -22,23 +28,23 @@
 }
 
 #secondary-post {
-  width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 0;
+  // width: 100%;
+  // min-height: 100%;
+  // position: absolute;
+  // top: 0;
 }
 
 .lg-screen {
   #secondary-post {
-    left: -100%;
-    opacity: 0;
+    // left: -100%;
+    // opacity: 0;
   }
 }
 .sm-screen {
   #secondary-post {
-    left: 0;
-    opacity: 1;
-    margin-top: 0;
+    // left: 0;
+    // opacity: 1;
+    // margin-top: 0;
 
     h1 {
       margin-top: 0;
@@ -51,11 +57,7 @@
 }
 
 .page-template-page-content-php {
-  .item-content {
-    @extend .tint_light;
-  }
   #secondary-post {
-    background-color: rgba(0, 0, 0, 0.9);
     color: $off_white;
 
     h1,
@@ -65,14 +67,14 @@
   }
 
   // news page specific
-  .post-21 {
-    .hero {
-      top: 62px;
-      @include breakpoint(mama-bear) {
-        top: 0;
-      }
-    }
-  }
+  // .post-21 {
+  //   .hero {
+  //     top: 62px;
+  //     @include breakpoint(mama-bear) {
+  //       top: 0;
+  //     }
+  //   }
+  // }
 }
 
 .news {

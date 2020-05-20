@@ -4,139 +4,120 @@
 */
 
 get_header(); ?>
+
+<div id="content" class="content post-<?php the_ID(); ?>">
 	
-<?php include 'inc/fullscreen-images.php'; ?>
+  <?php include 'inc/fullscreen-images.php'; ?>
 
+  <main id="main" class="site-main content_wrap" role="main">
 
-<main id="main" class="site-main content_wrap" role="main">
+	  <?php while ( have_posts() ) : the_post(); ?>
+	    <div id="post-<?php the_ID(); ?>">	        
+			  <article id="post-<?php the_ID(); ?>" <?php post_class('item-content'); ?>>
+				  <header class="entry-header">
+					  <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				  </header><!-- .entry-header -->
+				  <span class="brd-line"></span>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+				  <div class="entry-content">
+  					<?php// the_content(); ?>
 
-	<div class="grid">
-	    <div id="post-<?php the_ID(); ?>" class="col-1-2">
-	        <!-- <div class="item-content">
-	 -->
+				    <ul class="calendar_list">
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class('item-content'); ?>>
-				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-				</header><!-- .entry-header -->
-				<span class="brd-line"></span>
+	          <?php 
+	            $temp = $wp_query; 
+              $wp_query = null; 
+              $wp_query = new WP_Query(); 
 
-				<div class="entry-content">
-					<?php// the_content(); ?>
+              $today = date('Ymd');
 
+              $args = array (			
+                'post_type' => 'events',
+                'posts_per_page' => 10,
+                'paged' => $paged,
+                'cat' => -4,	
+                'meta_key' => 'start_date', // name of custom field
+                'orderby' => 'meta_value_num',
+                'order' => 'ASC'		    
+              );
 
-				<ul class="calendar_list">
+              $wp_query->query($args); 
+              while ($wp_query->have_posts()) : $wp_query->the_post(); 
+            ?>
 
-<?php 
+            <li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	$temp = $wp_query; 
-	$wp_query = null; 
-	$wp_query = new WP_Query(); 
+            <?php 
+              $start_date = get_field('start_date');
+              // $start_date = 19881123 (23/11/1988)
+              // extract Y,M,D
+              $y = substr($start_date, 0, 4);
+              $m = substr($start_date, 4, 2);
+              $d = substr($start_date, 6, 2);
 
-	$today = date('Ymd');
+              // create UNIX
+              $time = strtotime("{$d}-{$m}-{$y}");
 
-	$args = array (			
-		'post_type' => 'events',
-		'posts_per_page' => 10,
-		'paged' => $paged,
-		'cat' => -4,	
-		'meta_key' => 'start_date', // name of custom field
-		'orderby' => 'meta_value_num',
-		'order' => 'ASC'		    
-	);
-
-  $wp_query->query($args); 
-
-  // $wp_query->query('showposts=6&post_type=news'.'&paged='.$paged); 
-
-  while ($wp_query->have_posts()) : $wp_query->the_post(); 
-
-?>
-
-
-<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		<?php 
-			$start_date = get_field('start_date');
-			// $start_date = 19881123 (23/11/1988)
-			// extract Y,M,D
-			$y = substr($start_date, 0, 4);
-			$m = substr($start_date, 4, 2);
-			$d = substr($start_date, 6, 2);
-
-			// create UNIX
-			$time = strtotime("{$d}-{$m}-{$y}");
-
-			// format date (23/11/1988)
-			$start_full = date('jS M Y', $time);
-			$start_part = date('jS M', $time);
+              // format date (23/11/1988)
+              $start_full = date('jS M Y', $time);
+              $start_part = date('jS M', $time);
 
 
 
-			// if range of dates
-			if(get_field('end_date')) {
+              // if range of dates
+              if(get_field('end_date')) {
+                $end_date = get_field('end_date');
+                // $end_date = 19881123 (23/11/1988)
+                // extract Y,M,D
+                $end_y = substr($end_date, 0, 4);
+                $end_m = substr($end_date, 4, 2);
+                $end_d = substr($end_date, 6, 2);
 
-				$end_date = get_field('end_date');
-				// $end_date = 19881123 (23/11/1988)
-				// extract Y,M,D
-				$end_y = substr($end_date, 0, 4);
-				$end_m = substr($end_date, 4, 2);
-				$end_d = substr($end_date, 6, 2);
+                // create UNIX
+                $end_time = strtotime("{$end_d}-{$end_m}-{$end_y}");
 
-				// create UNIX
-				$end_time = strtotime("{$end_d}-{$end_m}-{$end_y}");
-
-				// format date (23/11/1988)
-				$end_res = date('jS M Y', $end_time);
-
-
-				echo '<span class="date meta_grid">' . $start_part . ' - '. $end_res . '</span>';
-			} else {
-				echo '<span class="date meta_grid">' . $start_full . '</span>';
-			}
-		?>		
-
-		<?php if (get_field('location')) : ?> 	
-			<span class="location meta_grid"> - <?php the_field('location'); ?></span>
-		<?php endif; ?>
-
-		<?php if (get_field('description')) : ?> 	
-			<div class="description"><?php the_field('description'); ?></div>
-		<?php endif; ?>	
-
-</li>
-
-<?php endwhile; ?>
-
-</ul>
-<span class="brd-line"></span>
-
-<?php /* Display navigation to next/previous pages when applicable */ ?>
-<?php if ( function_exists('jose_pagination') ) { jose_pagination(); } else if ( is_paged() ) { ?>
-	<nav id="post-nav">
-		<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'jose' ) ); ?></div>
-		<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'FoundationPress' ) ); ?></div>
-	</nav>
-<?php } ?>
+                // format date (23/11/1988)
+                $end_res = date('jS M Y', $end_time);
 
 
-<?php 
-  $wp_query = null; 
-  $wp_query = $temp;  // Reset
-  wp_reset_postdata();
-?>		
+                echo '<span class="date meta_grid">' . $start_part . ' - '. $end_res . '</span>';
+              } else {
+                echo '<span class="date meta_grid">' . $start_full . '</span>';
+              }
+            ?>		
+            <?php if (get_field('location')) : ?> 	
+              <span class="location meta_grid"> - <?php the_field('location'); ?></span>
+            <?php endif; ?>
+
+            <?php if (get_field('description')) : ?> 	
+              <div class="description"><?php the_field('description'); ?></div>
+            <?php endif; ?>	
+          </li>
+
+            <?php endwhile; ?>
+
+          </ul>
+
+          <span class="brd-line"></span>
+
+          <?php /* Display navigation to next/previous pages when applicable */ ?>
+          <?php if ( function_exists('jose_pagination') ) { jose_pagination(); } else if ( is_paged() ) { ?>
+            <nav id="post-nav">
+              <div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'jose' ) ); ?></div>
+              <div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'FoundationPress' ) ); ?></div>
+            </nav>
+          <?php } ?>
 
 
-
-
-
+          <?php 
+            $wp_query = null; 
+            $wp_query = $temp;  // Reset
+            wp_reset_postdata();
+          ?>		
 
 				</div><!-- .entry-content -->
 			</article><!-- #post-## -->
 		</div>
-	</div>
 
 	<?php endwhile; // end of the loop. ?>
 

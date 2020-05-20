@@ -1,17 +1,8 @@
-.itemList {
-  width: 45%;
-  margin: 3em auto;
-  padding: 0;
-  position: relative;
-  z-index: 2;
-
+.productions-list {
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
-
-    column-count: 2;
-    column-gap: 5px;
 
     li {
       list-style: none;
@@ -32,24 +23,6 @@
       }
     }
   }
-
-  @include breakpoint(tab_land) {
-    width: 70%;
-
-    ul {
-      column-count: 2;
-      column-gap: 10px;
-    }
-  }
-
-  @include breakpoint(mama-bear) {
-    width: 100%;
-
-    ul {
-      column-count: 1;
-      column-gap: 0px;
-    }
-  }
 }
 
 .item-content {
@@ -60,13 +33,6 @@
     h1 {
       margin-top: 0;
     }
-  }
-}
-
-// timedropper specific
-.post-35 {
-  .item-content {
-    @extend .tint;
   }
 }
 

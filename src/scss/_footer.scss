@@ -1,42 +1,18 @@
 #colophon {
   width: 100%;
-  // display: none;
+  background-color: black;
 }
 
 .site-footer {
-  width: 90%;
+  width: $inner-width;
   margin: 0 auto;
-  z-index: 10;
-  height: 60px;
-  background-color: rgba(0, 0, 0, 0.5);
-  // height: 100px;
-
-  ul {
-    padding: 2em 5%;
-
-    li {
-      padding: 0 1em;
-      line-height: 1em;
-      border-right: 1px solid $off_white;
-      color: $off_white;
-      &:first-of-type {
-        padding-left: 0;
-      }
-      &:last-of-type {
-        border-right: none;
-      }
-
-      a {
-        color: $off_white;
-      }
-    }
-  }
 }
 
-.credits {
-  float: right;
-  padding: 1em;
+.footer-details {
+  text-align: right;
+  color: $light_grey;
+  padding-bottom: 3rem;
   font-style: italic;
   font-size: 0.9em;
-  color: $light_grey;
+  color: #b4b4b4;
 }

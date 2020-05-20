@@ -4,14 +4,6 @@
     margin: 0;
   }
 
-  &.col-1-2 {
-    // width: 33.33%;
-    @include breakpoint(mama-bear) {
-      float: none;
-      width: 100%;
-    }
-  }
-
   &.item-content {
     @extend .tint;
   }
@@ -25,35 +17,54 @@
   }
 }
 
-// timedropper specific
-.post-35 {
-  .hero {
-    top: 62px;
+.media {
+  .entry-title {
+    margin-top: 1.5em;
   }
 }
 
 // contact page
-.contact {
-  .hero {
-    top: 62px;
-    @include breakpoint(mama-bear) {
-      top: 0;
+#post-92 {
+  .item-content {
+    background-color: $tint_light;
+    color: $body_color;
+    margin-top: 1em;
+    padding: 1em;
+
+    h1 {
+      color: $body_color;
+    }
+
+    .brd-line {
+      color: $body_color;
+    }
+    p {
+      margin: 0;
     }
   }
 }
 
-// work page specific
-.post-15 {
-  .hero {
-    top: 100px;
-    @include breakpoint(mama-bear) {
-      top: 0;
+// time dropper
+.post-35 {
+  .item-content {
+    @extend .tint;
+  }
+}
+
+.post-704 {
+  .item-content {
+    @extend .tint;
+  }
+  .content_wrap {
+    @include breakpoint(medium-up) {
+      margin-top: 3rem;
     }
   }
 }
 
-.media {
-  .entry-title {
-    margin-top: 1.5em;
+// work
+#post-15 {
+  &.item-content {
+    @extend .tint;
   }
 }
