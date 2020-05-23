@@ -1,6 +1,18 @@
 .media_list {
   max-width: $inner_width;
   margin: 0 auto;
+
+  .item-content {
+    max-width: $max_line_length;
+    background-color: $off_white;
+    color: $body_color;
+  }
+
+  @include breakpoint(medium-up) {
+    .item-content {
+      padding: 1rem 1rem 1rem 0;
+    }
+  }
 }
 
 .media-col {
@@ -43,6 +55,27 @@
   .media-col {
     .brd-line {
       display: block;
+      margin-bottom: 1rem;
     }
   }
 }
+
+.Media_thumbnail {
+  width: 100px;
+}
+
+// .page-id-736 {
+//   .flex-item {
+//     display: flex;
+//     align-items: flex-end;
+
+//     .Media_thumbnail {
+//       margin-right: 1rem;
+//     }
+//   }
+
+//   .Media_co,
+//   .Media_meta {
+//     padding-left: calc(100px + 1rem);
+//   }
+// }

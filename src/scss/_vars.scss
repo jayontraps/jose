@@ -1,6 +1,7 @@
 // layout
 $max-width: 100%;
 $inner-width: 94%;
+$max_line_length: 780px;
 
 // breakpoints
 $tab_land: 1024px;
@@ -18,16 +19,17 @@ $bg: #fbfbfb;
 $body_color: #333333;
 $off_white: #fbfbfb;
 $light_grey: #b4b4b4;
+$extra_light_grey: #f3f3f3;
 $grey: #666;
 $tint_dark: rgba(0, 0, 0, 0.7);
 $tint_light: rgba(255, 255, 255, 0.7);
 
 // fonts
-$body_font: 'Open Sans', sans-serif;
-$body_font_size: 15px;
+$body_font: 'Source Sans Pro', sans-serif;
+$heading_font: 'Source Sans Pro', sans-serif;
+$body_font_size: 16px;
 $smaller-font-size: 13px;
 $body_line_height: 1.5em;
-$heading_font: 'Josefin Sans', 'Open Sans Condensed', sans-serif;
 
 $letter-spacing: 0.2em;
 $heading_weight: 300;

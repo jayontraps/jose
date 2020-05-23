@@ -5,7 +5,7 @@
 
 get_header(); ?>
 
-<div id="content" class="content post-<?php the_ID(); ?>">
+<div id="content" class="content post-<?php the_ID(); ?> work-page">
 
   <?php include 'inc/fullscreen-images.php'; ?>
 

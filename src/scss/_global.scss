@@ -36,21 +36,6 @@ body {
   }
 }
 
-.tint {
-  background-color: $tint_dark;
-  color: $off_white;
-  padding: 1em;
-  margin-top: 1em;
-
-  h1 {
-    color: $off_white;
-  }
-
-  .brd-line {
-    color: $off_white;
-  }
-}
-
 .tint_light {
   background-color: $tint_light;
   color: $body_color;
@@ -62,6 +47,25 @@ body {
 
   .brd-line {
     color: $body_color;
+  }
+}
+
+.item-content {
+  padding: 1rem 1rem 1rem 0;
+  margin-top: 1em;
+  background-color: $tint_dark;
+  color: $off_white;
+
+  h1 {
+    color: $off_white;
+  }
+
+  .brd-line {
+    color: $off_white;
+  }
+
+  @include breakpoint(medium-up) {
+    padding: 1rem 1rem 1rem 6%;
   }
 }
 
@@ -149,4 +153,9 @@ strong {
   top: 5px;
   width: auto;
   z-index: 100000; /* Above WP toolbar */
+}
+
+// hide reCaptcha
+.grecaptcha-badge {
+  visibility: hidden;
 }

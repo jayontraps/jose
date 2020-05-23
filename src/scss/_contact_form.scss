@@ -1,0 +1,32 @@
+.contact {
+  max-width: $max_line_length;
+  padding-bottom: 3rem;
+}
+
+.contact_input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: $off_white;
+  border-bottom: 1px solid $body_color;
+  &::placeholder {
+    color: $light_grey;
+  }
+}
+
+.contact_textarea {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: $off_white;
+  border: 1px solid $body_color;
+  width: 100%;
+  padding: 1em;
+  &::placeholder {
+    color: $light_grey;
+  }
+}
+
+.contact_submit {
+  appearance: none;
+}

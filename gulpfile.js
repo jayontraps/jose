@@ -57,6 +57,7 @@ function css() {
       // lost(),
       autoprefixer()]))
     .pipe(sourcemaps.write())
+    .pipe(gulpif(!devBuild, cleanCSS({compatibility: 'ie8'})))
     // .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(dest + "css"))
     .pipe(browsersync.stream());

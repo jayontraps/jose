@@ -54,7 +54,7 @@ document.createElement( "picture" );
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="inner-header">
+		<div class="inner-header cf">
 
 			<div class="site_logo">				
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">

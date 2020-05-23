@@ -44,7 +44,7 @@ get_header(); ?>
           </div>                    
       </div>                    
 
-	<?php jose_post_nav(); ?>
+	<?php // jose_post_nav(); ?>
 	
   <?php endwhile; // end of the loop. ?>
 

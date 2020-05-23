@@ -1,22 +1,3 @@
-// over-rides for workshops page
-#post-23 {
-  .entry-content {
-    margin: 0;
-  }
-
-  &.item-content {
-    @extend .tint;
-  }
-}
-
-// over-rides for Calendar page
-
-#post-143 {
-  &.item-content {
-    @extend .tint;
-  }
-}
-
 .media {
   .entry-title {
     margin-top: 1.5em;
@@ -38,23 +19,10 @@
     .brd-line {
       color: $body_color;
     }
-    p {
-      margin: 0;
-    }
-  }
-}
-
-// time dropper
-.post-35 {
-  .item-content {
-    @extend .tint;
   }
 }
 
 .post-704 {
-  .item-content {
-    @extend .tint;
-  }
   .content_wrap {
     @include breakpoint(medium-up) {
       margin-top: 3rem;
@@ -62,9 +30,8 @@
   }
 }
 
-// work
-#post-15 {
-  &.item-content {
-    @extend .tint;
-  }
+// about
+#post-30 {
+  background-color: $off_white;
+  color: $body_color;
 }
