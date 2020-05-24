@@ -1,5 +1,6 @@
 .main {
   @include breakpoint(medium-up) {
+    width: 100%;
     display: flex;
     padding-bottom: 2rem;
   }

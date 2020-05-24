@@ -1,0 +1,88 @@
+svg#navicon {
+  fill: #ffffff;
+}
+
+.main-navigation {
+  &.toggled {
+    .slant {
+      display: none;
+    }
+  }
+}
+
+.main-navigation {
+  display: none;
+  &.toggled {
+    display: block;
+  }
+}
+
+@include breakpoint(small-only) {
+  .main-navigation {
+    background-color: $body_color;
+    a,
+    a:visited,
+    a:active {
+      color: $off-white;
+    }
+  }
+
+  .nav-menu {
+    list-style: none;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+    li {
+      margin-bottom: 1em;
+      a {
+        display: block;
+        padding: 0.25rem 0;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include breakpoint(medium-up) {
+  .main-navigation {
+    display: block;
+  }
+
+  .nav-menu {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: $off-white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: $smaller-font-size;
+        padding: 1em;
+        line-height: 1em;
+        display: block;
+        &:visited,
+        &:active {
+          color: $off-white;
+        }
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .slant {
+        width: 30px;
+        fill: $off-white;
+      }
+      &:last-of-type {
+        .slant {
+          display: none;
+        }
+      }
+    }
+  }
+}

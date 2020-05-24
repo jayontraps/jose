@@ -10,6 +10,12 @@
       list-style: none;
       a {
         text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        padding: 0.25rem 0;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

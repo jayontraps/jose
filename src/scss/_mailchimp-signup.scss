@@ -19,8 +19,8 @@
 }
 
 .mc_signup-input {
-  min-width: 320px;
-  width: 50%;
+  width: 80%;
+  max-width: 400px;
   max-width: $max_line_length;
   font-family: $heading_font;
   font-size: inherit;

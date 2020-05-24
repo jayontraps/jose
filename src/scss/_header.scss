@@ -1,71 +1,46 @@
 .site-header {
-  width: 100%;
-  height: 62px;
-  @extend .group;
   position: relative;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  @include breakpoint(mama-bear) {
-    height: auto;
-  }
+  background-color: black;
 }
 
 .inner-header {
   width: $inner-width;
   margin: 0 auto;
-}
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 
-.site-branding {
-  width: 170px;
-  height: 62px;
-  float: left;
-  background-color: black;
-}
-
-// .site-title {
-// 	// font-family: 'CF Sinclair W01 Regular';
-// 	text-align: left;
-// 	line-height: 1em;
-// 	margin:0;
-// 	padding:.3em .3em .3em 1em;
-// 	font-size:2.3em;
-
-// 	a {
-// 		&:visited {
-// 			color: $off_white;
-// 		}
-
-// 		&:hover {
-// 			color: $off_white;
-// 		}
-// 		color: $off_white;
-// 		text-decoration: none;
-// 	}
-// }
-
-.site_logo {
-  width: 300px;
-  height: 30px;
-  margin: 20px 0 0 0;
-  float: left;
-
-  a {
-    display: block;
-    width: 300px;
-    height: 30px;
-
-    @include breakpoint(slide_switch) {
-      width: 220px;
+  .main-navigation {
+    @include breakpoint(small-only) {
+      flex-basis: 100%;
     }
   }
 
-  .logo {
-    width: 100%;
+  .menu-toggle {
+    display: block;
+    width: 40px;
+    height: 40px;
+    @include breakpoint(medium-up) {
+      display: none;
+    }
+  }
+}
+
+.site_logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  img {
+    max-width: 300px;
   }
 
-  @include breakpoint(slide_switch) {
-    width: 220px;
+  @include breakpoint(small-only) {
+    img {
+      max-width: 200px;
+    }
   }
 }
 

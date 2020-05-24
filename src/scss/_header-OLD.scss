@@ -1,0 +1,106 @@
+.site-header {
+  width: 100%;
+  height: 62px;
+  @extend .group;
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  @include breakpoint(mama-bear) {
+    height: auto;
+  }
+}
+
+.inner-header {
+  width: $inner-width;
+  margin: 0 auto;
+}
+
+.site-branding {
+  width: 170px;
+  height: 62px;
+  float: left;
+  background-color: black;
+}
+
+// .site-title {
+// 	// font-family: 'CF Sinclair W01 Regular';
+// 	text-align: left;
+// 	line-height: 1em;
+// 	margin:0;
+// 	padding:.3em .3em .3em 1em;
+// 	font-size:2.3em;
+
+// 	a {
+// 		&:visited {
+// 			color: $off_white;
+// 		}
+
+// 		&:hover {
+// 			color: $off_white;
+// 		}
+// 		color: $off_white;
+// 		text-decoration: none;
+// 	}
+// }
+
+.site_logo {
+  width: 300px;
+  height: 30px;
+  margin: 20px 0 0 0;
+  float: left;
+
+  a {
+    display: block;
+    width: 300px;
+    height: 30px;
+
+    @include breakpoint(slide_switch) {
+      width: 220px;
+    }
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  @include breakpoint(slide_switch) {
+    width: 220px;
+  }
+}
+
+.site-title {
+  text-indent: -9999999px;
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
+.light {
+  .site-title {
+    a:visited {
+      color: $off_white;
+    }
+  }
+}
+
+// menu toggle
+
+.menu-toggle {
+  cursor: pointer;
+  display: none;
+}
+
+@include breakpoint(mama-bear) {
+  .menu-toggle,
+  .main-navigation.toggled .nav-menu {
+    display: block;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+    float: right;
+    margin: 10px;
+  }
+}

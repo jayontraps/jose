@@ -54,16 +54,13 @@ document.createElement( "picture" );
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="inner-header cf">
-
-			<div class="site_logo">				
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
-					<h1 class="site-title">Jose Agudo</h1>			
-				</a>
-			</div>
+		<div class="inner-header">
 			
-			
+			<a class="site_logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
+				<h1 class="site-title">Jose Agudo</h1>			
+			</a>
+						
 			 <svg id="navicon" class="menu-toggle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 				 width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
 			<rect x="6" y="9" width="28" height="2"/>
