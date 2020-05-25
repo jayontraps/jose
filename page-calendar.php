@@ -19,8 +19,7 @@ get_header(); ?>
 				  </header><!-- .entry-header -->
 				  <span class="brd-line"></span>
 
-				  <div class="entry-content">
-  					<?php// the_content(); ?>
+				  <div class="entry-content">  					
 
 				    <ul class="calendar_list">
 

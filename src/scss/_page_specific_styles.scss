@@ -38,3 +38,14 @@
   background-color: $off_white;
   color: $body_color;
 }
+
+// media
+.page-id-223 {
+  .Media {
+    &:first-of-type {
+      .brd-line {
+        display: none;
+      }
+    }
+  }
+}

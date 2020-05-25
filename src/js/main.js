@@ -10,7 +10,7 @@ jquery.lazyloadxt.extra.js
 ;(function ($) {
   $(document).ready(function () {    
 
-    // $('body').fitVids();
+    $('body').fitVids();
         
     $.extend($.lazyLoadXT, {
       onload: function(domEl) {

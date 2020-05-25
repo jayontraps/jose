@@ -10,6 +10,11 @@
 
 .footer-details {
   text-align: right;
+
+  @include breakpoint(small-only) {
+    margin-right: 0.5rem;
+  }
+
   color: $light_grey;
   padding-bottom: 3rem;
   font-style: italic;

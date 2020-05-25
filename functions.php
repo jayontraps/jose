@@ -141,7 +141,7 @@ function jose_scripts() {
 
 	wp_enqueue_style( 'jose-style-definition', get_stylesheet_uri(), array());
 
-	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/build/css/main.css', array(), '20200524' );
+	wp_enqueue_style( 'jose-style', get_template_directory_uri() . '/build/css/main.css', array(), '20200525' );
 
 	wp_enqueue_script( 'jose-modenizr', get_template_directory_uri() . '/plugins/modernizr-2.8.0.min.js', array(), false);
 

@@ -1,15 +1,14 @@
 .mc_signup {
-  // position: fixed;
-  // bottom: 0;
-  // left: 0;
-  z-index: 9999;
   max-width: $inner-width;
   margin: 0 auto;
   background-color: black;
   padding: 3rem 0;
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  @include breakpoint(medium-up) {
+    font-size: 1.5rem;
+  }
 }
 
 .mc_signup-wrapper {
@@ -19,9 +18,10 @@
 }
 
 .mc_signup-input {
-  width: 80%;
-  max-width: 400px;
-  max-width: $max_line_length;
+  width: 90%;
+  @include breakpoint(medium-up) {
+    width: 320px;
+  }
   font-family: $heading_font;
   font-size: inherit;
   appearance: none;
