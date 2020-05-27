@@ -10,15 +10,14 @@
 
   </div><!-- #content.content -->
 
-  <?php include "inc/mailchimp-signup.php"; ?>
+  
 	
-  <footer id="colophon" class="cf" role="contentinfo">			
-    <?php // jose_footer_nav(); ?>
-    <div class="site-footer cf">
-      <div class="footer-details"><?php // echo date('Y'); ?> &copy; Agudo Dance Company 12450230</div>
-      
-    </div>		
-  </footer>
+  <div class="footer" role="contentinfo">			
+      <?php include "inc/mailchimp-signup.php"; ?>
+      <div class="footer-details"><?php // echo date('Y'); ?> &copy; Agudo Dance Company 12450230</div>      
+    </div>
+  </div>
+
    	
 	
 	</div><!-- #page.wrapper -->

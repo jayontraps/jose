@@ -1,23 +1,37 @@
-#colophon {
-  width: 100%;
-  background-color: black;
+.footer {
+  width: $inner_width;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  @include breakpoint(medium-up) {
+    margin: 0 auto 4rem auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 }
 
-.site-footer {
-  width: $inner-width;
-  margin: 0 auto;
+.mc_signup-wrapper,
+.footer-details {
+  display: block;
+  @include breakpoint(small-only) {
+    margin-bottom: 2rem;
+  }
+}
+
+.mc_signup-wrapper {
+  @include breakpoint(medium-up) {
+    width: 400px;
+  }
 }
 
 .footer-details {
-  text-align: right;
-
-  @include breakpoint(small-only) {
-    margin-right: 0.5rem;
-  }
-
-  color: $light_grey;
-  padding-bottom: 3rem;
   font-style: italic;
   font-size: 0.9em;
   color: #b4b4b4;
+
+  @include breakpoint(medium-up) {
+    width: 300px;
+    text-align: right;
+  }
 }

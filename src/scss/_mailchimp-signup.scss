@@ -1,17 +1,11 @@
 .mc_signup {
-  max-width: $inner-width;
-  margin: 0 auto;
   background-color: black;
-  padding: 3rem 0;
   display: flex;
   align-items: center;
   font-size: 1.2rem;
   @include breakpoint(medium-up) {
     font-size: 1.5rem;
   }
-}
-
-.mc_signup-wrapper {
 }
 
 .mc_signup-title {

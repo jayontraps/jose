@@ -31,11 +31,11 @@ get_header(); ?>
               ?>
                 <li>
                   <?php if( $role ): ?>
-                    <span class="cred_role"><?php echo $role; ?>: </span>
+                    <span class="cred_role"><?php echo $role; ?>:</span>
                   <?php endif; ?>
                   <?php if( $name ): ?>
-                    <span class="cred_name"><?php echo $name; ?></span>
-                  <?php endif; ?>
+                    <span class="cred_name">&nbsp;<?php echo $name; ?></span>
+                  <?php endif; ?>   
                 </li>
               <?php endwhile; ?>
             </ul>

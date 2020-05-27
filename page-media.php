@@ -56,7 +56,7 @@ get_header(); ?>
           </div>
 
           <div class="media-col Media_video">				
-            <iframe data-src="<?php echo $media_embed_code; ?>?title=0&amp;byline=0&amp;portrait=0" width="630" height="357" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe data-src="<?php echo $media_embed_code; ?>?title=0&amp;byline=0&amp;portrait=0" width="630" height="357" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
           </div>
 
         </div>
