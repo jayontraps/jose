@@ -70,6 +70,11 @@ get_header(); ?>
     <div id="challenge-contact-form" class="contact">
       <?php if (is_page( "adc-dance-challenge" )): ?>
         <?php echo do_shortcode( '[contact-form-7 id="761" title="ADC Dance Challenge"]' ); ?>
+        <div class="logo-grid">
+          <img src="http://www.joseagudo.co.uk/wp-content/uploads/2020/05/lottery_Logo_Black_RGB_royasy.jpg" alt="looery logo" />          
+          <img src="http://www.joseagudo.co.uk/wp-content/uploads/2020/05/Croydon_Council_P260_copy_c9vwls.jpg" alt="Croyon council logo" />
+          <img src="http://www.joseagudo.co.uk/wp-content/uploads/2020/05/Logo___The_Yoga_Edge_z954xs.png" alt="the Yoga Edge logo" class="square" />
+        </div>
       <?php endif; ?> 
     </div>
 	<?php endwhile; // end of the loop. ?>

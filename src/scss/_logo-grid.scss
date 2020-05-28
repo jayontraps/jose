@@ -1,0 +1,28 @@
+.logo-grid {
+  margin: 4rem 0 1rem 0;
+  max-width: $max_line_length;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @include breakpoint(medium-up) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  img {
+    object-fit: contain;
+    display: block;
+    max-width: 300px;
+
+    padding: 10px 0;
+    @include breakpoint(medium-up) {
+      padding: 10px;
+    }
+
+    &.square {
+      max-width: 120px;
+    }
+  }
+}
