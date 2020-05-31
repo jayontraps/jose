@@ -57,7 +57,7 @@ document.createElement( "picture" );
 		<div class="inner-header">
 			
 			<a class="site_logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-				<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.svg">	
+				<img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/img/JADC-logo-dark.png">	
 				<h1 class="site-title">Jose Agudo</h1>			
 			</a>
 						

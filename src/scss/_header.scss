@@ -23,7 +23,7 @@
     display: block;
     position: absolute;
     right: 0;
-    top: 7.5px;
+    top: 12px;
     width: 40px;
     height: 40px;
     @include breakpoint(medium-up) {
@@ -37,15 +37,17 @@
   align-items: center;
   justify-content: center;
   padding: 20px 0;
-  img {
-    max-width: 300px;
-  }
+  width: calc(100% - 60px);
+  max-width: 400px;
+  // img {
+  //   max-width: 300px;
+  // }
 
-  @include breakpoint(small-only) {
-    img {
-      max-width: 260px;
-    }
-  }
+  // @include breakpoint(small-only) {
+  //   img {
+  //     max-width: 260px;
+  //   }
+  // }
 }
 
 .site-title {
