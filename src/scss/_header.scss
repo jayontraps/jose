@@ -35,19 +35,9 @@
 .site_logo {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 20px 0;
   width: calc(100% - 60px);
   max-width: 400px;
-  // img {
-  //   max-width: 300px;
-  // }
-
-  // @include breakpoint(small-only) {
-  //   img {
-  //     max-width: 260px;
-  //   }
-  // }
 }
 
 .site-title {
