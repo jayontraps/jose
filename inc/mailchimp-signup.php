@@ -1,6 +1,6 @@
 
 <div class="mc_signup-wrapper" id="mc_embed_signup">
-  <form class="mc_signup" action="https://jayontraps.us2.list-manage.com/subscribe/post?u=970b249464484260806ca2cdf&amp;id=6ad32edc12" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+  <form class="mc_signup" action="https://joseagudo.us15.list-manage.com/subscribe/post?u=20ac7732512be4420bfbc8b1a&amp;id=39c429d753" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <input placeholder="Subscribe to our newsletter" type="email" value="" name="EMAIL" class="required email mc_signup-input" id="mce-EMAIL">        
 
     <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button mc_signup-submit">
@@ -10,7 +10,7 @@
     </button>      
     
     <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="b_970b249464484260806ca2cdf_6ad32edc12" tabindex="-1" value="">
+        <input type="text" name="b_20ac7732512be4420bfbc8b1a_39c429d753" tabindex="-1" value="">
     </div>
   </form>
 </div>
