@@ -4,7 +4,6 @@
     background-color: $tint_light;
     color: $body_color;
     margin-top: 1em;
-    padding: 1em;
 
     h1 {
       color: $body_color;
@@ -22,6 +21,13 @@
   }
   @include breakpoint(small-only) {
     background-color: #fff;
+    .item-content {
+      padding: 1em;
+    }
+  }
+
+  .brd-line {
+    border-color: $body_color;
   }
 }
 

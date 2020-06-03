@@ -3,9 +3,6 @@
   display: flex;
   align-items: center;
   font-size: 1.2rem;
-  @include breakpoint(medium-up) {
-    font-size: 1.5rem;
-  }
 }
 
 .mc_signup-title {
