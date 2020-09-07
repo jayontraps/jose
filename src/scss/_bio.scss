@@ -1,10 +1,10 @@
-.main {
-  @include breakpoint(medium-up) {
-    width: 100%;
-    display: flex;
-    padding-bottom: 2rem;
-  }
-}
+// .main {
+//   @include breakpoint(medium-up) {
+//     width: 100%;
+//     display: flex;
+//     padding-bottom: 2rem;
+//   }
+// }
 
 .main_content {
   max-width: $inner-width;
@@ -14,6 +14,61 @@
     margin-right: 2rem;
     width: 50%;
     order: 1;
+  }
+}
+
+.about {
+  max-width: $inner-width;
+  margin: 0 auto;
+  color: $body_color;
+  background-color: $bg;
+  h1.entry-title {
+    margin-top: 2em;
+    color: $body_color;
+  }
+  .about_title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: $body_color;
+    margin-top: 0.7em;
+  }
+  .credits {
+    text-align: right;
+  }
+}
+
+.company_content {
+  margin-top: 2rem;
+}
+
+.about_profile {
+  padding-bottom: 3rem;
+  @include breakpoint(medium-up) {
+    display: flex;
+  }
+}
+
+@include breakpoint(medium-up) {
+  .about_description {
+    width: 50%;
+    padding-right: 3rem;
+    &.company {
+      padding-top: 1rem;
+      width: 100%;
+      max-width: 70rem;
+      // .company_content {
+      //   columns: 2;
+      //   column-gap: 3rem;
+      //   p {
+      //     margin-top: 0;
+      //   }
+      // }
+    }
+  }
+
+  .about_image {
+    width: 50%;
+    max-width: 450px;
   }
 }
 

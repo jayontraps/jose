@@ -5,37 +5,57 @@
 
 get_header(); ?>
 
-  <main id="main" class="main" role="main">  
+  <main id="main" class="main about" role="main">  
     <?php while ( have_posts() ) : the_post(); ?>  
     
-    <div class="main_image">
-      
-      
-      <?php 
-      $fullscreen_image = get_field('fullscreen_image');
-      $mobile_image = get_field('mobile_image');
-        if( !empty($mobile_image) ): ?>
-        
-        <!-- <img id="fullscreen-image" src="<?php echo $mobile_image['url']; ?>" alt="" > -->
-        <picture>
-            <!--[if IE 9]><video style="display: none;"><![endif]-->
-            <source srcset="<?php echo $fullscreen_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>" media="(min-width: 768px)">
-            <!--[if IE 9]></video><![endif]-->
-            <img id="fullscreen-image" srcset="<?php echo $mobile_image['url']; ?>" alt="<?php echo $fullscreen_image['alt']; ?>">
-        </picture>
-        
-        <?php if(get_field('image_credits')): ?>
-          <div class="credits">
-            <span>Image credit: </span><?php echo get_field('image_credits') ?>
-          </div>
-        <?php endif; ?>            
-      <?php endif; ?>
+    <div class="about_profile">
+      <div class="about_description company">
+        <header class="entry-header">        
+          <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>		
+        </header>
+        <span class="brd-line"></span>
+        <div class="company_content"><?php the_content(); ?></div>
+      </div>
     </div>
+      
+    
+    
+    <?php while( have_rows('profiles') ): the_row(); 
+      $title = get_sub_field('title');
+      $content = get_sub_field('content');
+      $image = get_sub_field('image');
+      $image_credit = get_sub_field('image_credit');         
+    ?>
+    
+      <div class="about_profile">
+        <div class="about_description">
+          <header class="entry-header">          
+          <?php if( $title ): ?>      
+            <h2 class="about_title"><?php echo $title; ?></h2>			
+          <?php endif; ?>
+          </header>      
+          <?php if( $content ): ?>      
+            <?php echo $content; ?>
+          <?php endif; ?>
+        </div>
+        <div class="about_image">
+          <?php if( !empty( $image ) ): ?>
+            <img class="profile_pic" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+          <?php endif; ?>
+                  
+          <?php if( $image_credit ): ?>
+            <div class="credits">
+              <span>Image credit: </span><?php echo $image_credit ?>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
+    
+    <?php endwhile; ?>
 
-    <div class="main_content">
-      <?php get_template_part( 'content', 'page' ); ?>
-    </div>    
-	 
+
+    
+
 		
 	  <?php endwhile; // end of the loop. ?>
   </main><!-- #main -->
